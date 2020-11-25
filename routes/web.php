@@ -26,8 +26,10 @@ Route::get('/', function () {
 Route::prefix('manager')->group(function (){
 
 Route::resource('business','backend\Business\businesscontroller');
+//Setting Router
+Route::get('setting','backend\Settings\settingscontroller@index')->name('setting_index');
+Route::post('setting/update','backend\Settings\settingscontroller@update')->name('setting_update');
 
-Route::get('denedik',[deneme::class,'deneme'])->name('deneme');
 Route::get('icerikadd',[deneme::class,'icerik'])->name('icerikadd');
 Route::get('icerikindex',[deneme::class,'icerik1'])->name('icerikindex');
 Route::get('slideradd',[deneme::class,'slider'])->name('slideradd');
