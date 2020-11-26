@@ -1,6 +1,6 @@
 <?php
 use App\Models\SettingModel;
-use claviska\SimpleImage;
+use abeautifulsite\SimpleImage;
 
 function dizinolustur($path, $mode = 0777, $recursive = false, $force = false)
 {

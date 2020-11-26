@@ -15,8 +15,9 @@
                     <h4 class="card-title">Site Ayarları</h4>
                     <p class="card-title-desc">Bu kısımda firma bilgileri ve ayarları yapılmaktadır.</p>
 
-                    <form method="post" action="{{route('setting_update',$setting->id)}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('webSetting.update',$setting->id)}}" enctype="multipart/form-data">
                         @csrf
+                        @method('put')
                     <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">
@@ -127,19 +128,19 @@
                             <div class="form-group row">
                                 <label for="example-url-input" class="col-md-2 col-form-label">Site Üst Logo</label>
                                 <div class="col-md-10">
-                                    <input  type="file"   class="form-control"name="logo" value="{{$setting->logo}}" multiple="multiple">
+                                    <input  type="file"   class="form-control" name="logo" value="{{$setting->logo}}" >
                                 </div>
                              </div>
                             <div class="form-group row">
                                 <label for="example-url-input" class="col-md-2 col-form-label">Site Alt Logo</label>
                                 <div class="col-md-10">
-                                    <input  type="file"  class="form-control" name="logo2" value="{{$setting->logo2}}" multiple="multiple">
+                                    <input  type="file"  class="form-control" name="logo2" value="{{$setting->logo2}}" >
                                 </div>
                              </div>
                             <div class="form-group row">
                                 <label for="example-url-input" class="col-md-2 col-form-label">Site Icon Logo</label>
                                 <div class="col-md-10">
-                                    <input  type="file" class="form-control" name="icon" value="{{$setting->icon}}" multiple="multiple">
+                                    <input  type="file" class="form-control" name="icon" value="{{$setting->icon}}" >
                                 </div>
                              </div>
 

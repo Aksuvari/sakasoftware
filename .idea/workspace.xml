@@ -20,23 +20,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca6870d9-f236-424b-9e3e-0daa43b9e412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/SettingModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_25_143455_create_setting_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-iconjpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-logo2jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-logojpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/webSetting/icon1606348819.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/webSetting/logo1606348819.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/webSetting/logo21606348819.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/phpstan.neon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/Medical.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/en_SG/Person.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/AblyBroadcaster.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Queue/ShouldBeUniqueUntilProcessing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Console/DbCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sakasoftware.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sakasoftware.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-iconjpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-logo2jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/saka-software-yonetim-paneli-logojpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Setting/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Setting/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/AbstractField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/AbstractField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/CronExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/CronExpression.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/DayOfWeekField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/DayOfWeekField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldFactoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldFactoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/FieldInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/HoursField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/HoursField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/MinutesField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/MinutesField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/MonthField.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/src/Cron/MonthField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/AbstractFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/CronExpressionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/DayOfMonthFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/DayOfWeekFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/FieldFactoryTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/HoursFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/MinutesFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/tests/Cron/MonthFieldTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Factory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Generator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/lt_LT/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/lt_LT/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/ro_RO/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fakerphp/faker/src/Faker/Provider/ro_RO/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/raw/Exclusions.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/raw/Exclusions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/raw/Exclusions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/raw/Exclusions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/src/Fixtures/Exclusions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect/src/Fixtures/Exclusions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/src/Actions/AttemptToAuthenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/src/Actions/AttemptToAuthenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/src/Actions/RedirectIfTwoFactorAuthenticatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/src/Actions/RedirectIfTwoFactorAuthenticatable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/src/Features.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/src/Features.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/src/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/src/FortifyServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/fortify/stubs/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/fortify/stubs/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/Broadcaster.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/Broadcaster.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/PusherBroadcaster.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/PusherBroadcaster.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/RedisBroadcaster.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/RedisBroadcaster.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/CacheManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/CacheManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/Arr.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/Arr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/Collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/Collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/LazyCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Collections/LazyCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Concerns/InteractsWithIO.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Concerns/InteractsWithIO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/DetectsLostConnections.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/DetectsLostConnections.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/PostgresSchemaState.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/PostgresSchemaState.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Providers/ArtisanServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Providers/ArtisanServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Wormhole.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Wormhole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Client/PendingRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Client/PendingRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/Markdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/Markdown.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Console/stubs/batches.stub" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Console/stubs/batches.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/DatabaseQueue.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/DatabaseQueue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteSignatureParameters.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteSignatureParameters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/jetstream/stubs/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/jetstream/stubs/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/sanctum/src/SanctumServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/sanctum/src/SanctumServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +133,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,6 +267,7 @@
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/claviska/simpleimage" />
       <path value="$PROJECT_DIR$/vendor/league/color-extractor" />
+      <path value="$PROJECT_DIR$/vendor/shekarsiri/simpleimage" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kTPIGwftT1DlpCApgqFwkdrg0l" />
@@ -238,7 +329,7 @@
       <workItem from="1606221074586" duration="609000" />
       <workItem from="1606305469874" duration="7038000" />
       <workItem from="1606314206001" duration="2612000" />
-      <workItem from="1606341279768" duration="4885000" />
+      <workItem from="1606341279768" duration="7003000" />
     </task>
     <servers />
   </component>
@@ -259,6 +350,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="419" key="#Composer" timestamp="1605721643158">
@@ -273,6 +365,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606308430045" />
+    <state x="736" y="452" key="ComposerInitDialogKey" timestamp="1606347330537">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="736" y="452" key="ComposerInitDialogKey/0.0.1920.1080@0.0.1920.1080" timestamp="1606347330537" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1606341304713">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -299,5 +395,9 @@
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1605985822261" />
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605739026227" />
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606346677767">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606346677767" />
   </component>
 </project>

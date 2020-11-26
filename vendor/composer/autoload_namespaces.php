@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'claviska' => array($vendorDir . '/claviska/simpleimage/src'),
+    'abeautifulsite' => array($vendorDir . '/shekarsiri/simpleimage/src'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Detection' => array($vendorDir . '/mobiledetect/mobiledetectlib/namespaced'),
 );

@@ -557,6 +557,13 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
                 0 => __DIR__ . '/..' . '/claviska/simpleimage/src',
             ),
         ),
+        'a' => 
+        array (
+            'abeautifulsite' => 
+            array (
+                0 => __DIR__ . '/..' . '/shekarsiri/simpleimage/src',
+            ),
+        ),
         'M' => 
         array (
             'Mockery' => 
@@ -1128,6 +1135,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Faker\\Provider\\Image' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Image.php',
         'Faker\\Provider\\Internet' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Internet.php',
         'Faker\\Provider\\Lorem' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Lorem.php',
+        'Faker\\Provider\\Medical' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Medical.php',
         'Faker\\Provider\\Miscellaneous' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Miscellaneous.php',
         'Faker\\Provider\\Payment' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Payment.php',
         'Faker\\Provider\\Person' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/Person.php',
@@ -1231,6 +1239,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Faker\\Provider\\en_PH\\Address' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_PH/Address.php',
         'Faker\\Provider\\en_PH\\PhoneNumber' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_PH/PhoneNumber.php',
         'Faker\\Provider\\en_SG\\Address' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_SG/Address.php',
+        'Faker\\Provider\\en_SG\\Person' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_SG/Person.php',
         'Faker\\Provider\\en_SG\\PhoneNumber' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_SG/PhoneNumber.php',
         'Faker\\Provider\\en_UG\\Address' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_UG/Address.php',
         'Faker\\Provider\\en_UG\\Internet' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/en_UG/Internet.php',
@@ -1748,6 +1757,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Illuminate\\Broadcasting\\BroadcastException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/BroadcastException.php',
         'Illuminate\\Broadcasting\\BroadcastManager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php',
         'Illuminate\\Broadcasting\\BroadcastServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/BroadcastServiceProvider.php',
+        'Illuminate\\Broadcasting\\Broadcasters\\AblyBroadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/AblyBroadcaster.php',
         'Illuminate\\Broadcasting\\Broadcasters\\Broadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/Broadcaster.php',
         'Illuminate\\Broadcasting\\Broadcasters\\LogBroadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/LogBroadcaster.php',
         'Illuminate\\Broadcasting\\Broadcasters\\NullBroadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/NullBroadcaster.php',
@@ -1923,6 +1933,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Illuminate\\Contracts\\Queue\\QueueableCollection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableCollection.php',
         'Illuminate\\Contracts\\Queue\\QueueableEntity' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableEntity.php',
         'Illuminate\\Contracts\\Queue\\ShouldBeUnique' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldBeUnique.php',
+        'Illuminate\\Contracts\\Queue\\ShouldBeUniqueUntilProcessing' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldBeUniqueUntilProcessing.php',
         'Illuminate\\Contracts\\Queue\\ShouldQueue' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php',
         'Illuminate\\Contracts\\Redis\\Connection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Redis/Connection.php',
         'Illuminate\\Contracts\\Redis\\Connector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Redis/Connector.php',
@@ -1975,6 +1986,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Illuminate\\Database\\Connectors\\PostgresConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php',
         'Illuminate\\Database\\Connectors\\SQLiteConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php',
         'Illuminate\\Database\\Connectors\\SqlServerConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/SqlServerConnector.php',
+        'Illuminate\\Database\\Console\\DbCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/DbCommand.php',
         'Illuminate\\Database\\Console\\DumpCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/DumpCommand.php',
         'Illuminate\\Database\\Console\\Factories\\FactoryMakeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Factories/FactoryMakeCommand.php',
         'Illuminate\\Database\\Console\\Migrations\\BaseCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Migrations/BaseCommand.php',
@@ -5418,6 +5430,7 @@ class ComposerStaticInitdd4868bb2cbc3f864f252ed613e7e04f
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'abeautifulsite\\SimpleImage' => __DIR__ . '/..' . '/shekarsiri/simpleimage/src/abeautifulsite/SimpleImage.php',
         'claviska\\SimpleImage' => __DIR__ . '/..' . '/claviska/simpleimage/src/claviska/SimpleImage.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',

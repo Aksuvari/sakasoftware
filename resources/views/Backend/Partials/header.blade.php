@@ -39,7 +39,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <!-- item-->
                         <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i> Profile</a>
-                        <a class="dropdown-item" href="{{route('setting_index')}}"><i class="bx bx-wallet font-size-16 align-middle mr-1"></i> Site Ayarları </a>
+                        <a class="dropdown-item" href="{{route('webSetting.index')}}"><i class="bx bx-wallet font-size-16 align-middle mr-1"></i> Site Ayarları </a>
                         <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="bx bx-wrench font-size-16 align-middle mr-1"></i> E-mail Ayarları</a>
                         <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Kullanıcı Yönetimi</a>
                         <div class="dropdown-divider"></div>
