@@ -85,9 +85,9 @@ class settingscontroller extends Controller
         return redirect()->back();
     }*/
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
-        $setting = SettingModel::find(1);
+        $setting = SettingModel::find($id);
         $logo = request()->has("logo");
         $logo2 = request()->has("logo2");
         $icon = request()->has("icon");

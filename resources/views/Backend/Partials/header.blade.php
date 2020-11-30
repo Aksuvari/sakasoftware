@@ -67,7 +67,7 @@
                                         <img src="{{asset('backend')}}/assets/images/logo-sm.png" alt="" height="20">
                                     </span>
                         <span class="logo-lg">
-                                        <img src="{{asset('backend')}}/assets/images/logo-light.png" alt="" height="19">
+                                        <img src="{{asset('backend')}}/assets/images/sakalogo.png" alt="" height="50">
                                     </span>
                     </a>
                 </div>

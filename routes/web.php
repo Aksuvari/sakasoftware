@@ -4,6 +4,9 @@
 use Illuminate\Support\Facades\Route;
 //Admin controller Listesi
 use App\Http\Controllers\backend\Settings\settingscontroller;
+use App\Http\Controllers\backend\Bussiness\businesscontroller;
+use App\Http\Controllers\backend\Slider\sliderController;
+use App\Http\Controllers\backend\Blog\blogController;
 use App\Http\Controllers\deneme;
 
 
@@ -26,26 +29,48 @@ Route::get('/', function () {
 
 
 Route::prefix('manager')->group(function (){
+    //Setting Router
 Route::name('webSetting.')->group(function (){
     Route::get('setting',[settingscontroller::class,'index'])->name('index');
     Route::put('setting/update/{id}',[settingscontroller::class,'update'])->name('update');
 });
 
 Route::resource('business','backend\Business\businesscontroller');
-//Setting Router
+Route::get('businessdelete/{id}','backend\Business\businesscontroller@delete')->name('delete');
 
+Route::name('Sliders.')->group(function (){
+    Route::get('slideradd',[sliderController::class,'create'])->name('create');
+    Route::get('sliderindex',[sliderController::class,'index'])->name('index');
+    Route::post('sliderstore',[sliderController::class,'store'])->name('store');
+    Route::get('slideredit/{id}',[sliderController::class,'edit'])->name('edit');
+    Route::put('sliderupdate/{id}',[sliderController::class,'update'])->name('update');
+    Route::post('sliderdelete/{id}',[sliderController::class,'delete'])->name('delete');
+
+    Route::post('slider/isActiveSetter/{id}', [sliderController::class,'isActiveSetter'])->name('isActiveSetter');
+    Route::post('slider/rankSetter', [sliderController::class,'rankSetter'])->name('rankSetter');
+});
+
+Route::name('Blogs.')->group(function (){
+    Route::get('blog',[blogController::class,'index'])->name('index');
+    Route::get('blogadd',[blogController::class,'create'])->name('create');
+    Route::post('blogstore',[blogController::class,'store'])->name('store');
+    Route::get('blogedit/{id}',[blogController::class,'edit'])->name('edit');
+    Route::put('blogupdate/{id}',[blogController::class,'update'])->name('update');
+    Route::post('blogdelete/{id}',[blogController::class,'delete'])->name('delete');
+
+    Route::post('bloghomePageView/{id}',[blogController::class,'homePageView'])->name('homePageView');
+    Route::post('blogrankSetter',[blogController::class,'rankSetter'])->name('rankSetter');
+    Route::post('blogisActiveSetter/{id}',[blogController::class,'isActiveSetter'])->name('isActiveSetter');
+});
 
 
 Route::get('icerikadd',[deneme::class,'icerik'])->name('icerikadd');
 Route::get('icerikindex',[deneme::class,'icerik1'])->name('icerikindex');
-Route::get('slideradd',[deneme::class,'slider'])->name('slideradd');
-Route::get('sliderindex',[deneme::class,'slider1'])->name('sliderindex');
+
 Route::get('portfolioadd',[deneme::class,'portfolio'])->name('portfolioadd');
 Route::get('portfolioindex',[deneme::class,'portfolio1'])->name('portfolioindex');
 Route::get('serviceadd',[deneme::class,'hizmetler'])->name('serviceadd');
 Route::get('serviceindex',[deneme::class,'hizmetler1'])->name('serviceindex');
-Route::get('blogadd',[deneme::class,'blog'])->name('blogadd');
-Route::get('blogindex',[deneme::class,'blog1'])->name('blogindex');
 Route::get('paketadd',[deneme::class,'paket'])->name('paketadd');
 Route::get('paketindex',[deneme::class,'paket1'])->name('paketindex');
 

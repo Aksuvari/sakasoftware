@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\BusinessModel;
 
+
 class businesscontroller extends Controller
 {
     /**
@@ -37,7 +38,7 @@ class businesscontroller extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $business=new BusinessModel;
         $business->title=$request->title;
         $business->costumer_name=$request->costumer_name;
@@ -60,7 +61,7 @@ class businesscontroller extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -71,7 +72,8 @@ class businesscontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $business=BusinessModel::findorFail($id);
+         return view('Backend.Business.update',compact('business'));
     }
 
     /**
@@ -83,7 +85,18 @@ class businesscontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $business=BusinessModel::findorFail($id);
+        $business->title=$request->title;
+        $business->costumer_name=$request->costumer_name;
+        $business->costumer_contact=$request->costumer_contact;
+        $business->aut_name=$request->aut_name;
+        $business->aut_maker_name=$request->aut_maker_name;
+        $business->contentt=$request->contentt;
+        $business->updated_at=now();
+        $business->created_at=now();
+        $business->save();
+
+        return redirect()->route('business.index');
     }
 
     /**
@@ -92,6 +105,12 @@ class businesscontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function delete(int $id)
+    {
+        BusinessModel::find($id)->delete();
+        return redirect()->route('business.index');
+    }
     public function destroy($id)
     {
         //

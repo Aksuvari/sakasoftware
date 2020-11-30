@@ -8,5 +8,7 @@
 <script src="{{asset('backend/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js')}}"></script>
 <script src="{{asset('backend/assets/js/pages/dashboard.init.js')}}"></script>
 <script src="{{asset('backend/assets/js/app.js')}}"></script>
-<script src="{{asset('backend/css/extra/toastr/toastr.css')}}"></script>
+<script src="{{asset('backend/assets/extra/toastr/toastr.js')}}"></script>
+<script src="{{asset('backend/js/custom.js')}}"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>

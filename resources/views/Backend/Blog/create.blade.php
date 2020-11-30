@@ -14,20 +14,21 @@
                 <div class="card-body">
                     <h4 class="card-title">Blog Yönetimi Yönetimi</h4>
                     <p class="card-title-desc">Sitemizde bulunan blog'a ait içerikler</p>
-                    <form action="">
+                    <form action="{{route('Blogs.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">Başlık</label>
                         <div class="col-md-10">
-                            <input class="form-control" type="text" name="">
+                            <input class="form-control" type="text" name="title">
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-md-2 col-form-label">İçerik</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" name="" value="Burayı ck5 editörü eklenecek">
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-md-2 col-form-label">İçerik</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="description" placeholder="" name="description" rows="10"></textarea>
+                            </div>
                         </div>
-                    </div>
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">Etiketler</label>
                         <div class="col-md-10">
@@ -38,7 +39,7 @@
                     <div class="form-group row text-right">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-primary"> Ekle</button>
-                            <a href="https://sakasoftware.com/manager/content" class="btn btn-danger"> İptal </a>
+                            <a href="{{route('Blogs.index')}}" class="btn btn-danger"> İptal </a>
                         </div>
                     </div>
                     </form>
@@ -50,4 +51,11 @@
 @endsection
 
 @section('script')
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#description' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection

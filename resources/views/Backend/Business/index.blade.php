@@ -76,10 +76,10 @@
                                 <td>
                                     <div class=" row text-center">
                                         <div class="col-lg-4">
-                                            <a href="" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
+                                            <a href="{{route('business.edit',$busines->id)}}" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
                                         </div>
                                         <div class="col-lg-2">
-                                            <a href="" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
+                                            <a href="{{route('delete',$busines->id)}}" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
                                         </div>
                                     </div>
                                 </td>

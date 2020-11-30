@@ -26,7 +26,7 @@
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">İçerik</label>
                         <div class="col-md-10">
-                            <input class="form-control" type="text" name="" value="Burayı ck5 editörü eklenecek">
+                            <textarea class="form-control" id="description" placeholder="" name="description" rows="10"></textarea>
                         </div>
                     </div>
 
@@ -45,4 +45,11 @@
 @endsection
 
 @section('script')
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#description' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection

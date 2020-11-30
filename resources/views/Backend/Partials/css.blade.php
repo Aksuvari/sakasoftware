@@ -9,7 +9,9 @@
 <!-- App Css-->
 <link href="{{asset('backend/assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 <link href="{{asset('backend')}}/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
-<link href="{{asset('backend/css/extra/toastr/toastr.css')}}"/>
+<link href="{{asset('backend/assets/extra/toastr/toastr.css')}}"/>
+
+<link rel="stylesheet" href="{{asset('backend/assets/css/custom.css')}}" type="text/css"/>
 
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
