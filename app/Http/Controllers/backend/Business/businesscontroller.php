@@ -38,6 +38,23 @@ class businesscontroller extends Controller
      */
     public function store(Request $request)
     {
+        $rules=[
+            'title'=>'required',
+            'costumer_name'=>'required',
+            'costumer_contact'=>'required',
+            'aut_name'=>'required',
+            'aut_maker_name'=>'required',
+            'contentt'=>'required',
+        ];
+        $customMessages=[
+            'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'costumer_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'costumer_contact.required'=>'Bu Alanı doldurmak zorunludur.',
+            'aut_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'aut_maker_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'contentt.required'=>'Bu Alanı doldurmak zorunludur.',
+        ];
+        $this->validate($request,$rules,$customMessages);
 
         $business=new BusinessModel;
         $business->title=$request->title;
@@ -85,6 +102,24 @@ class businesscontroller extends Controller
      */
     public function update(Request $request, $id)
     {
+        $rules=[
+            'title'=>'required',
+            'costumer_name'=>'required',
+            'costumer_contact'=>'required',
+            'aut_name'=>'required',
+            'aut_maker_name'=>'required',
+            'contentt'=>'required',
+        ];
+        $customMessages=[
+            'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'costumer_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'costumer_contact.required'=>'Bu Alanı doldurmak zorunludur.',
+            'aut_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'aut_maker_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'contentt.required'=>'Bu Alanı doldurmak zorunludur.',
+        ];
+        $this->validate($request,$rules,$customMessages);
+
         $business=BusinessModel::findorFail($id);
         $business->title=$request->title;
         $business->costumer_name=$request->costumer_name;

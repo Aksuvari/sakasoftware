@@ -87,6 +87,25 @@ class settingscontroller extends Controller
 
     public function update(Request $request, $id)
     {
+        $rules=[
+            'company_name'=>'required',
+            'description'=>'required',
+            'keywords'=>'required',
+            'email'=>'required',
+            'phone_1'=>'required',
+            'phone_2'=>'required',
+            'address'=>'required',
+        ];
+        $customMessages=[
+            'company_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'description.required'=>'Bu Alanı doldurmak zorunludur.',
+            'keywords.required'=>'Bu Alanı doldurmak zorunludur.',
+            'email.required'=>'Bu Alanı doldurmak zorunludur.',
+            'phone_1.required'=>'Bu Alanı doldurmak zorunludur.',
+            'phone_2.required'=>'Bu Alanı doldurmak zorunludur.',
+            'address.required'=>'Bu Alanı doldurmak zorunludur.',
+        ];
+        $this->validate($request,$rules,$customMessages);
         $setting = SettingModel::find($id);
         $logo = request()->has("logo");
         $logo2 = request()->has("logo2");

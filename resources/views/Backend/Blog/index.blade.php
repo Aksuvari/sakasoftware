@@ -27,7 +27,6 @@
                             <tr>
                                 <th> <i class="bx-menu"></i> </th>
                                 <th>Başlık</th>
-                                <th>İçerik</th>
                                 <th>Durumu</th>
                                 <th>Slider Gözüksün</th>
                                 <th>Anasayfa'da Gözüksün</th>
@@ -45,7 +44,7 @@
                                             #{{$blogs->id}}
                                         </td>
                                         <td class="text-center">{{$blogs->title}}</td>
-                                        <td class="text-center">{!! $blogs->description !!}</td>
+
                                         <td class="text-center">
                                             <form action="{{ route('Blogs.isActiveSetter',$blogs->id)}}" method="post">
                                                 @csrf

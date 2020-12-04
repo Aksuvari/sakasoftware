@@ -1,27 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\backend\Blog;
-use Illuminate\Foundation\Validation\ValidatesRequests;
+namespace App\Http\Controllers\backend\Service;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\BlogModel;
+use App\Models\ServiceModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
-class blogController extends Controller
+class serviceController extends Controller
 {
-
     public function create(){
-
-        return view('Backend.Blog.create');
+        return view('Backend.Services.create');
     }
 
     public function index(){
-        $blog=BlogModel::all();
-        return view('Backend.Blog.index',compact('blog'));
+        $services=ServiceModel::all();
+        return view('Backend.Services.index',compact('services'));
     }
     public function store(Request $request){
-
         $rules=[
             'title'=>'required',
             'description'=>'required',
@@ -31,20 +27,19 @@ class blogController extends Controller
             'description.required'=>'Bu Alanı doldurmak zorunludur.'
         ];
         $this->validate($request,$rules,$customMessages);
-
-        $blog=new BlogModel;
-        $blog->title=$request->title;
-        $blog->description=$request->description;
-        $blog->slug = Str::slug(request('title'),'-');
-        $blog->updated_at=now();
-        $blog->created_at=now();
-        $blog->save();
-        return back()->with("status", "Your message has been received, We'll get back to you shortly.");
+        $services=new ServiceModel;
+        $services->title=$request->title;
+        $services->description=$request->description;
+        $services->slug = Str::slug(request('title'),'-');
+        $services->updated_at=now();
+        $services->created_at=now();
+        $services->save();
+        return back();
     }
 
     public function edit($id){
-        $blog=BlogModel::find($id);
-        return view('Backend.Blog.update',compact('blog'));
+        $services=ServiceModel::find($id);
+        return view('Backend.Services.update',compact('services'));
     }
 
     public function update(Request $request,$id){
@@ -57,31 +52,29 @@ class blogController extends Controller
             'description.required'=>'Bu Alanı doldurmak zorunludur.'
         ];
         $this->validate($request,$rules,$customMessages);
-        $blog=BlogModel::find($id);
-        $blog->title=$request->title;
-        $blog->description=$request->description;
-        $blog->slug = Str::slug(request('title'),'-');
-        $blog->updated_at=now();
-        $blog->created_at=now();
-        $blog->save();
-        return redirect()->route('Blogs.index');
+        $services=ServiceModel::find($id);
+        $services->title=$request->title;
+        $services->description=$request->description;
+        $services->slug = Str::slug(request('title'),'-');
+        $services->updated_at=now();
+        $services->created_at=now();
+        $services->save();
+        return redirect()->route('Services.index');
     }
-
-
 
     public function delete(int $id)
     {
-        BlogModel::find($id)->delete();
-        return redirect()->route('Blogs.index');
+        ServiceModel::find($id)->delete();
+        return redirect()->route('Services.index');
     }
 
     public function homePageView($id)
     {
         if ($id) {
-            $blog = BlogModel::find($id);
+            $services = ServiceModel::find($id);
             $homePage = (request('data') == "true") ? 1 : 0;
-            $blog->anasayfa = $homePage;
-            $blog->save();
+            $services->anasayfa = $homePage;
+            $services->save();
         }
     }
 
@@ -89,10 +82,10 @@ class blogController extends Controller
     {
         $data = request('data');
         parse_str($data, $order);
-        $blog = $order["ord"];
-        print_r($blog);
-        foreach ($blog as $rank => $id) {
-            DB::table('blog')
+        $services = $order["ord"];
+        print_r($services);
+        foreach ($services as $rank => $id) {
+            DB::table('service')
                 ->where('id', $id)
                 ->where('rank', '!=', $rank)
                 ->update(['rank' => $rank]);
@@ -101,10 +94,10 @@ class blogController extends Controller
     public function isActiveSetter($id)
     {
         if ($id) {
-            $blog = BlogModel::find($id);
+            $services = ServiceModel::find($id);
             $isActive = (request('data') == "true") ? 1 : 0;
-            $blog->isActive = $isActive;
-            $blog->save();
+            $services->isActive = $isActive;
+            $services->save();
         }
     }
 

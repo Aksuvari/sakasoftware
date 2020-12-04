@@ -51,18 +51,27 @@
                                     <label for="example-text-input" class="col-md-2 col-form-label">Firma Adı</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" name="company_name" value="{{$setting->company_name}}" id="example-text-input" placeholder="Firma Adı">
+                                        @error('company_name')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-text-input" class="col-md-2 col-form-label">Firma Bilgileri</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" name="description" value="{{$setting->description}}" id="example-text-input"  placeholder="Firma Bilgileri">
+                                        @error('description')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-text-input" class="col-md-2 col-form-label">Keywords</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" name="keywords" value="{{$setting->keywords}}" id="example-text-input">
+                                        @error('keywords')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -72,6 +81,9 @@
                                     <label for="example-email-input" class="col-md-2 col-form-label">Email</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="email" name="email" value="{{$setting->email}}" id="">
+                                        @error('email')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -79,18 +91,27 @@
                                     <label for="example-tel-input" class="col-md-2 col-form-label">Telefon</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="tel" name="phone_1" value="{{$setting->phone_1}}" id="">
+                                        @error('phone_1')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-tel-input" class="col-md-2 col-form-label">Telefon 2</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="tel" name="phone_2" value="{{$setting->phone_2}}" id="">
+                                        @error('phone_2')
+                                        <div class="alert alert-danger"> {{$message}}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             <div class="form-group row">
                                 <label for="example-text-input" class="col-md-2 col-form-label">Adres</label>
                                 <div class="col-md-10">
                                     <input class="form-control" type="text" name="address" value="{{$setting->address}}" id="">
+                                    @error('address')
+                                    <div class="alert alert-danger"> {{$message}}</div>
+                                    @enderror
                                 </div>
                             </div>
 

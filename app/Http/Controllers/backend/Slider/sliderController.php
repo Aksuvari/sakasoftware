@@ -17,6 +17,16 @@ class sliderController extends Controller
         return view('Backend.Slider.create');
     }
     public function store(Request $request){
+        $rules=[
+            'title'=>'required',
+            'description'=>'required',
+        ];
+        $customMessages=[
+            'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'description.required'=>'Bu Alanı doldurmak zorunludur.'
+        ];
+        $this->validate($request,$rules,$customMessages);
+
         $sliders=new SliderModel();
         $sliders->title=request('title');
         $sliders->description =request('description');
@@ -31,6 +41,15 @@ class sliderController extends Controller
         return view('Backend.Slider.update',compact('sliders'));
     }
     public function update(Request $request,$id){
+        $rules=[
+            'title'=>'required',
+            'description'=>'required',
+        ];
+        $customMessages=[
+            'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'description.required'=>'Bu Alanı doldurmak zorunludur.'
+        ];
+        $this->validate($request,$rules,$customMessages);
         $sliders=SliderModel::find($id);
         $sliders->title=$request->title;
         $sliders->description =$request->description;

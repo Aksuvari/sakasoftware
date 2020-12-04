@@ -19,7 +19,10 @@
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">Başlık</label>
                         <div class="col-md-10">
-                            <input class="form-control" type="text" name="title">
+                            <input class="form-control" type="text" name="title" required>
+                            @error('title')
+                            <div class="alert alert-danger"> {{$message}}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -27,6 +30,9 @@
                             <label for="example-text-input" class="col-md-2 col-form-label">İçerik</label>
                             <div class="col-md-10">
                                 <textarea class="form-control" id="description" placeholder="" name="description" rows="10"></textarea>
+                                @error('description')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                     <div class="form-group row">

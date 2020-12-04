@@ -22,30 +22,45 @@
                             <label for="example-text-input" class="col-md-2 col-form-label">Proje Adı</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="title" id="title" value="{{$business->title}}">
+                                @error('title')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Müsteri Adı</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="costumer_name" id="costumer_name" value="{{$business->costumer_name}}">
+                                @error('costumer_name')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-tel-input" class="col-md-2 col-form-label">Müşteri Tel No</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="tel" value="{{$business->costumer_contact}}" name="costumer_contact" id="costumer_contact">
+                                @error('costumer_contact')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">İlgilenen Kişi</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="aut_name" value="{{$business->aut_name}}" id="aut_name">
+                                @error('aut_name')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Yapan Kişi</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="aut_maker_name" id="aut_maker_name" value="{{$business->aut_maker_name}}" >
+                                <input class="form-control" type="text" name="aut_maker_name" id="aut_maker_name" value="{{$business->aut_maker_name}}">
+                                @error('aut_maker_name')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -53,6 +68,9 @@
                             <label for="example-tel-input" class="col-md-2 col-form-label">Not</label>
                             <div>
                                 <textarea  class="form-control" rows="5" name="contentt" id="contentt" >{!!$business->contentt !!}}</textarea>
+                                @error('contentt')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
                             </div>
                         </div>
 
