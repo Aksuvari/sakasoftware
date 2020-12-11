@@ -10,7 +10,7 @@ use App\Models\SliderModel;
 class sliderController extends Controller
 {
     public function index(){
-        $sliders=SliderModel::all();
+        $sliders=SliderModel::orderby("rank","asc")->get();
         return view('Backend.Slider.index',compact('sliders'));
     }
     public function create(){
@@ -66,9 +66,9 @@ class sliderController extends Controller
     {
         $data = request('data');
         parse_str($data, $order);
-        $sliders = $order["ord"];
-        print_r($sliders);
-        foreach ($sliders as $rank => $id) {
+        $items = $order["ord"];
+        print_r($items);
+        foreach ($items as $rank => $id) {
             DB::table('slider')
                 ->where('id', $id)
                 ->where('rank', '!=', $rank)

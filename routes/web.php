@@ -9,6 +9,8 @@ use App\Http\Controllers\backend\Slider\sliderController;
 use App\Http\Controllers\backend\Blog\blogController;
 use App\Http\Controllers\backend\Content\contentController;
 use App\Http\Controllers\backend\Service\serviceController;
+use App\Http\Controllers\backend\Portfolyo\portfolyoController;
+use App\Http\Controllers\backend\Package\packageController;
 use App\Http\Controllers\deneme;
 
 
@@ -90,12 +92,34 @@ Route::name('Blogs.')->group(function (){
         Route::post('servicerankSetter',[serviceController::class,'rankSetter'])->name('rankSetter');
         Route::post('serviceisActiveSetter/{id}',[serviceController::class,'isActiveSetter'])->name('isActiveSetter');
     });
+    Route::name('Ports.')->group(function (){
+        Route::get('portfolio',[portfolyoController::class,'index'])->name('index');
+        Route::get('portfoliocreate',[portfolyoController::class,'create'])->name('create');
+        Route::post('portfoliostore',[portfolyoController::class,'store'])->name('store');
+        Route::get('portfolioedit/{id}',[portfolyoController::class,'edit'])->name('edit');
+        Route::put('portfolioupdate/{id}',[portfolyoController::class,'update'])->name('update');
+        Route::post('portfoliodelete/{id}',[portfolyoController::class,'delete'])->name('delete');
+
+        Route::post('portfoliorankSetter',[portfolyoController::class,'rankSetter'])->name('rankSetter');
+        Route::post('portfolioisActiveSetter/{id}',[portfolyoController::class,'isActiveSetter'])->name('isActiveSetter');
+    });
+    Route::name('Packages.')->group(function (){
+        Route::get('package',[packageController::class,'index'])->name('index');
+        Route::get('packagecreate',[packageController::class,'create'])->name('create');
+        Route::post('packagestore',[packageController::class,'store'])->name('store');
+        Route::get('packageedit/{id}',[packageController::class,'edit'])->name('edit');
+        Route::put('packageupdate/{id}',[packageController::class,'update'])->name('update');
+        Route::post('packagedelete/{id}',[packageController::class,'delete'])->name('delete');
+
+        Route::post('packagehomePageView/{id}',[packageController::class,'homePageView'])->name('homePageView');
+        Route::post('packagerankSetter',[packageController::class,'rankSetter'])->name('rankSetter');
+        Route::post('packageisActiveSetter/{id}',[packageController::class,'isActiveSetter'])->name('isActiveSetter');
+    });
 
 
-Route::get('portfolio',[deneme::class,'portfolio'])->name('portfolioadd');
-Route::get('portfolioindex',[deneme::class,'portfolio1'])->name('portfolioindex');
-Route::get('paketadd',[deneme::class,'paket'])->name('paketadd');
-Route::get('paketindex',[deneme::class,'paket1'])->name('paketindex');
+
+
+
 
 });
 /*Route::prefix('/manager')->group(function () {

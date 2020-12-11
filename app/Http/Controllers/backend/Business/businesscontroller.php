@@ -16,7 +16,7 @@ class businesscontroller extends Controller
      */
     public function index()
     {
-        $business=BusinessModel::orderBy('created_at','ASC')->get();
+        $business=BusinessModel::orderby("id", "asc")->get();;
         return view('backend.Business.index',compact('business'));
     }
 

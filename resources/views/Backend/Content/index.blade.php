@@ -40,9 +40,9 @@
                                 @csrf
                                 @foreach($contents as $content)
 
-                                    <tr>
-                                        <td class="ordericon">
-                                            #{{$content->id}}
+                                    <tr id="{{$content->id}}">
+                                        <td class="text-center">
+                                            <i class="bx-menu"></i>
                                         </td>
                                         <td class="text-center">{{$content->title}}</td>
                                         <td class="text-center">{{$content->getCategory->name}}</td>

@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryModel extends Model
 {
     protected $table = 'categories';
+    protected $guarded = [];
     protected $primaryKey = 'id';
-    public $timestamps=false;
+    protected $fillable = ['name','slug'];
 
     public function contentCount(){
         return $this->hasMany('App\Models\ContentModel','category_id','id')->count(); //bu kod bir kategoriye birden fazla içerik eklememi sağlıyor ve kategori sayfasında bu

@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
+    <meta name="csrf-token" content="{{ Session::token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App favicon -->
     @include('Backend.Partials.css')
-    @yield('css')
+    @yield('page_css')
 </head>
 
 <body data-layout="detached" data-topbar="colored">

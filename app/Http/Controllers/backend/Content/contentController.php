@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
 class contentController extends Controller
 {
     public function index(){
-        $contents=ContentModel::all();
+        $contents=ContentModel::orderby("rank","asc")->get();
         return view('Backend.Content.index',compact('contents'));
     }
     public function create(){
@@ -46,9 +46,9 @@ class contentController extends Controller
         return back();
     }
     public function edit($id){
-        $contents=ContentModel::find($id);
+        $contents=ContentModel::findOrFail($id);
         $categories=CategoryModel::all();
-        return view('Backend.Content.index',compact('categories','contents'));
+        return view('Backend.Content.update',compact('categories','contents'));
     }
     public function update(Request $request,$id){
         $rules=[
@@ -66,8 +66,8 @@ class contentController extends Controller
         $this->validate($request,$rules,$customMessages);
 
         $contents=ContentModel::find($id);
-        $contents->category_id=$request->category;
         $contents->title=$request->title;
+        $contents->category_id=$request->category;
         $contents->short_des=$request->short_des;
         $contents->description=$request->description;
         $contents->slug = Str::slug(request('title'),'-');

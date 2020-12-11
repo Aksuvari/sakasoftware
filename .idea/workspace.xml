@@ -20,35 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca6870d9-f236-424b-9e3e-0daa43b9e412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Content/contentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Service/serviceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CategoryModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ContentModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ServiceModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_104326_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_110328_create_content_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_213521_create_service_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/CategorySeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Package/packageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Portfolyo/portfolyoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/PackageModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/PackageTypeModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/PortModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ProjectTypeModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_05_192536_create_project_type_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_05_211245_create_port_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_162354_create_package_type_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_165655_create_package_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PackageTypeSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/projectTypeSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/jquery/jquery-ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Blog/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Blog/blogController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Business/businesscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Business/businesscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Content/contentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Content/contentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Slider/sliderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Slider/sliderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BusinessModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BusinessModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ContentModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ContentModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_29_201539_create_blog_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_29_201539_create_blog_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_110328_create_content_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_110328_create_content_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Business/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Business/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Business/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Business/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Content/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Content/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Content/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Content/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Content/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Services/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Services/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Services/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Services/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Setting/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Setting/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Slider/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Slider/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Slider/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Slider/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/adminmaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/adminmaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Portfolio/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Portfolio/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Portfolio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Portfolio/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Slider/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Slider/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
@@ -68,9 +76,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="blade" />
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -211,6 +219,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -221,16 +230,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\jquery" />
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra" />
       <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\css" />
       <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\js" />
       <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\images" />
-      <recent name="C:\xampp\htdocs\sakasoftware\resources\views\Backend" />
-      <recent name="C:\xampp\htdocs\sakasoftware\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -273,7 +283,19 @@
       <workItem from="1606774127989" duration="396000" />
       <workItem from="1606988417831" duration="12089000" />
       <workItem from="1607028401826" duration="4926000" />
-      <workItem from="1607119030879" duration="3940000" />
+      <workItem from="1607119030879" duration="4988000" />
+      <workItem from="1607124585509" duration="32000" />
+      <workItem from="1607164955712" duration="2458000" />
+      <workItem from="1607167494551" duration="6688000" />
+      <workItem from="1607189055998" duration="92000" />
+      <workItem from="1607195885059" duration="3956000" />
+      <workItem from="1607203674395" duration="383000" />
+      <workItem from="1607263442098" duration="6290000" />
+      <workItem from="1607378155752" duration="3584000" />
+      <workItem from="1607382058138" duration="704000" />
+      <workItem from="1607515601005" duration="5630000" />
+      <workItem from="1607553396653" duration="4583000" />
+      <workItem from="1607680781596" duration="804000" />
     </task>
     <servers />
   </component>
@@ -295,59 +317,5 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="770" y="419" key="#Composer" timestamp="1605721643158">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="770" y="419" key="#Composer/0.0.1920.1080@0.0.1920.1080" timestamp="1605721643158" />
-    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606167485348">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1606167485348" />
-    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607031638282">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1607031638282" />
-    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606469418086" />
-    <state x="736" y="452" key="ComposerInitDialogKey" timestamp="1606347330537">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="736" y="452" key="ComposerInitDialogKey/0.0.1920.1080@0.0.1920.1080" timestamp="1606347330537" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1607028661820">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1607028661820" />
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606767383401" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1605722329727">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605722329727" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1605722329727">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605722329727" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1605722329727">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605722329727" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1605722329727">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605722329727" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1605985822261">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1605985822261" />
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605739026227" />
-    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606770803055">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1606770803055" />
-    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606348940030" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1607032913939">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.331.1366.768@0.0.1920.1080" timestamp="1607032913939" />
   </component>
 </project>

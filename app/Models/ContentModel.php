@@ -9,7 +9,6 @@ class ContentModel extends Model
 {
     protected $table = 'content';
     protected $primaryKey = 'id';
-    public $timestamps=false;
     protected $fillable=[
         'title',
         'short_des',

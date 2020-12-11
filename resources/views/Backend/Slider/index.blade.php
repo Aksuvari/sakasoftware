@@ -2,7 +2,7 @@
 @section('title')
     Manager Panel
 @endsection
-@section('css')
+@section('page_css')
 
 @endsection
 @section('page_title')
@@ -23,9 +23,10 @@
                             <div class="btn-toolbar">
                                 </table>
                                 </div>
-                                <table id="tech-companies-1" class="table table-striped table-bordered content-container" >
+                                <table id="tech-companies-1" class="table table-striped sortable table-bordered content-container" >
                                     <thead>
                                     <tr>
+                                        <th> <i class="bx-menu"></i> </th>
                                         <th id="tech-companies-1-col-0">Başlık</th>
                                         <th data-priority="1" id="tech-companies-1-col-1">Görseller</th>
                                         <th data-priority="3" id="tech-companies-1-col-2">Durumu</th>
@@ -38,7 +39,10 @@
 
                                     @csrf
                                     @foreach($sliders as $slider)
-                                    <tr>
+                                    <tr id="ord-{{$slider->id}}">
+                                        <td class="text-center">
+                                           <i class="bx-menu"></i>
+                                        </td>
                                         <td class="text-center">
                                             {{$slider->title}}
                                         </td>
@@ -50,7 +54,7 @@
                                                 @csrf
                                                 <input
                                                     type="checkbox"
-                                                    data-url="{{route('Blogs.isActiveSetter',$slider->id) }}"
+                                                    data-url="{{route('Sliders.isActiveSetter',$slider->id) }}"
                                                     class="isActive"
                                                     type="checkbox"
                                                     id="switch{{$slider->id}}"
@@ -93,5 +97,7 @@
 @endsection
 
 @section('script')
-<script src="{{asset('backend')}}/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
+
+<script src="{{asset('backend/assets/libs/admin-resources/rwd-table/rwd-table.min.js')}}"></script>
+
 @endsection

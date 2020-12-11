@@ -25,16 +25,19 @@ class blogController extends Controller
         $rules=[
             'title'=>'required',
             'description'=>'required',
+            'label'=>'required',
         ];
         $customMessages=[
             'title.required'=>'Bu Alanı doldurmak zorunludur.',
-            'description.required'=>'Bu Alanı doldurmak zorunludur.'
+            'description.required'=>'Bu Alanı doldurmak zorunludur.',
+            'label.required'=>'Bu Alanı doldurmak zorunludur.',
         ];
         $this->validate($request,$rules,$customMessages);
 
         $blog=new BlogModel;
         $blog->title=$request->title;
         $blog->description=$request->description;
+        $blog->label=$request->label;
         $blog->slug = Str::slug(request('title'),'-');
         $blog->updated_at=now();
         $blog->created_at=now();
@@ -51,15 +54,18 @@ class blogController extends Controller
         $rules=[
             'title'=>'required',
             'description'=>'required',
+            'label'=>'required',
         ];
         $customMessages=[
             'title.required'=>'Bu Alanı doldurmak zorunludur.',
-            'description.required'=>'Bu Alanı doldurmak zorunludur.'
+            'description.required'=>'Bu Alanı doldurmak zorunludur.',
+            'label.required'=>'Bu Alanı doldurmak zorunludur.',
         ];
         $this->validate($request,$rules,$customMessages);
         $blog=BlogModel::find($id);
         $blog->title=$request->title;
         $blog->description=$request->description;
+        $blog->label=$request->label;
         $blog->slug = Str::slug(request('title'),'-');
         $blog->updated_at=now();
         $blog->created_at=now();

@@ -122,7 +122,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('business.index')}}" class="waves-effect">
                         <i class="mdi mdi-flip-horizontal"></i>
                         <span>İş Takip Yönetimi</span>
                     </a>
@@ -130,7 +130,7 @@
                 </li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
+                    <a href="{{route('Contents.index')}}" class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
                         <span>İçerik Yönetimi</span>
                     </a>
@@ -145,7 +145,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Ports.index')}}" class="waves-effect">
                         <i class="mdi mdi-calendar-check"></i>
                         <span>Portfölyö Yönetimi</span>
                     </a>
@@ -153,7 +153,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Blogs.index')}}" class="waves-effect">
                         <i class="mdi mdi-account-circle-outline"></i>
                         <span>Blok Yönetimi</span>
                     </a>
@@ -161,7 +161,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Sliders.index')}}" class="waves-effect">
                         <i class="mdi mdi-checkbox-multiple-blank-outline"></i>
                         <span>Slider Yönetimi</span>
                     </a>
@@ -169,7 +169,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Services.index')}}" class="waves-effect">
                         <i class="mdi mdi-newspaper"></i>
                         <span>Hizmet</span>
                     </a>
@@ -177,7 +177,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Packages.index')}}" class="waves-effect">
                         <i class="mdi mdi-clipboard-list-outline"></i>
                         <span>Paket Yönetimi</span>
                     </a>

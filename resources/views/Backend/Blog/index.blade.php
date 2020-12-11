@@ -39,9 +39,9 @@
                                 @csrf
                                 @foreach($blog as $blogs)
 
-                                    <tr>
+                                    <tr id="ord-{{$blogs->id}}">
                                         <td class="ordericon">
-                                            #{{$blogs->id}}
+                                            #
                                         </td>
                                         <td class="text-center">{{$blogs->title}}</td>
 

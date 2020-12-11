@@ -15,7 +15,7 @@
                     <h4 class="card-title">Portfolyo Listeleri</h4>
                     <p class="card-title-desc">Yönetim Panelinden Eklemiş Olduğunuz Portfolyoların Listesi</p>
                     <div class="col-lg-12 text-right m-b-10">
-                        <a href="" class="btn btn-success "><i class="bx bx-plus"></i> Yeni Ekle</a>
+                        <a href="{{route('Ports.create')}}" class="btn btn-success "><i class="bx bx-plus"></i> Yeni Ekle</a>
                     </div>
                     <br>
 
@@ -24,7 +24,7 @@
 
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th> <i class="bx-menu"></i></th>
                                 <th>Proje Adı</th>
                                 <th>Proje Türü</th>
                                 <th>Proje Url</th>
@@ -32,37 +32,52 @@
                                 <th>İşlemler</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Otto</td>
-                                <td class="text-center">
-                                    <input  class="switch" d="toggle-one" type="checkbox" checked data-toggle="toggle" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger">
-                                </td>
-                                <td>
-                                    <div class=" row text-center">
-                                        <div class="col-lg-4">
-                                            <a href="" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <a href="" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                {{-- <td class="text-center">
-                                      <div class="button-items">
-                                          <a href=""
-                                             class="btn btn-outline-primary waves-effect waves-light btn-sm">Düzenle</a>
-                                          <form action="" method="post" >
-                                              <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
-                                          </form>
-                                      </div>
+                            <tbody class="sortable" data-url="{{route('Ports.rankSetter')}}">
 
-                                  </td>--}}
+                            <form action="{{route('Ports.rankSetter')}}" method="post">
+                                @csrf
+                                @foreach($ports as $port)
 
-                            </tr>
+                                    <tr id="{{$port->id}}">
+                                        <td class="text-center">
+                                            <i class="bx-menu"></i>
+                                        </td>
+                                        <td class="text-center">{{$port->title}}</td>
+                                        <td class="text-center">{{$port->getType->name}}</td>
+                                        <td class="text-center">{{$port->project_url}}</td>
+                                        <td class="text-center">
+                                            <form action="{{ route('Ports.isActiveSetter',$port->id)}}" method="post">
+                                                @csrf
+                                                <input
+                                                    type="checkbox"
+                                                    data-url="{{route('Ports.isActiveSetter',$port->id) }}"
+                                                    class="isActive"
+                                                    type="checkbox"
+                                                    id="switch{{$port->id}}"
+                                                    switch="bool"
+                                                    {{($port->isActive) ? "checked" : ""}}
+                                                />
+                                                <label for="switch{{$port->id}}" data-on-label="Aktif" data-off-label="Pasif"></label>
+                                            </form>
+                                        </td>
+
+                                        <td class="text-center">
+                                            <div class="button-items">
+                                                <form action="{{route('Ports.edit',$port->id)}}" >
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
+                                                </form>
+                                                <form action="{{route('Ports.delete',$port->id)}}" method="post" >
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
+                                                </form>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+                                @endforeach
+                            </form>
                             </tbody>
                         </table>
                     </div>
