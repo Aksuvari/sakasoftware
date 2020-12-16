@@ -42,7 +42,7 @@ class packageController extends Controller
         $packages->updated_at=now();
         $packages->created_at=now();
         $packages->save();
-        return back();
+        return redirect()->route('Packages.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
     public function edit($id){
         $types=PackageTypeModel::all();
@@ -72,7 +72,7 @@ class packageController extends Controller
         $packages->updated_at=now();
         $packages->created_at=now();
         $packages->save();
-        return redirect()->route('Packages.index');
+        return redirect()->route('Packages.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
     public function delete(int $id){
         PackageModel::find($id)->delete();

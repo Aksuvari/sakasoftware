@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBlogTable extends Migration
+class CreateProjectTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,19 @@ class CreateBlogTable extends Migration
      */
     public function up()
     {
-        Schema::create('blog', function (Blueprint $table) {
+        Schema::create('project', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('project_type_id');
             $table->string('title');
+            $table->string('project_url');
             $table->longText('description');
-            $table->string('label');
             $table->string('slug');
-            $table->tinyInteger('anasayfa')->default('0');
-            $table->tinyInteger('slider')->default('0');
             $table->tinyInteger('isActive')->default(1);
             $table->tinyInteger('rank')->default(0);
             $table->timestamps();
+            $table->foreign('project_type_id')
+                ->references('id')
+                ->on('project_type');
         });
     }
 
@@ -34,6 +36,6 @@ class CreateBlogTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog');
+        Schema::dropIfExists('project');
     }
 }

@@ -102,4 +102,22 @@ class contentController extends Controller
             $contents->save();
         }
     }
+    public function homePageView($id)
+    {
+        if ($id) {
+            $contents = ContentModel::find($id);
+            $homePage = (request('data') == "true") ? 1 : 0;
+            $contents->anasayfa = $homePage;
+            $contents->save();
+        }
+    }
+    public function sliderView($id)
+    {
+        if ($id) {
+            $contents = ContentModel::find($id);
+            $sliderr = (request('data') == "true") ? 1 : 0;
+            $contents->slider = $sliderr;
+            $contents->save();
+        }
+    }
 }

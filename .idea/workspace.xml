@@ -20,42 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca6870d9-f236-424b-9e3e-0daa43b9e412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Package/packageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Portfolyo/portfolyoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PackageModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PackageTypeModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PortModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Project/projectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ProjectModel.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Models/ProjectTypeModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_05_192536_create_project_type_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_05_211245_create_port_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_162354_create_package_type_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_165655_create_package_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/PackageTypeSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/projectTypeSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_103347_create_project_type_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_103452_create_project_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/Label/bootstrap-tagsinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/Label/bootstrap-tagsinput.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/Sweetalert/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/assets/extra/Sweetalert/sweetalert2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/js/pages/sweet-alerts.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/js/pages/sweet-alerts.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/bootstrap-editable/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/bootstrap-editable/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/select2/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/select2/js/select2.full.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/select2/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kullanılacak Template/Backend/dist/assets/libs/select2/js/select2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Blog/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Blog/blogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Business/businesscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Business/businesscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Content/contentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Content/contentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Package/packageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Package/packageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Settings/settingscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/Slider/sliderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/Slider/sliderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BusinessModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BusinessModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ContentModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ContentModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/deneme.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_29_201539_create_blog_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_29_201539_create_blog_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_110328_create_content_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_110328_create_content_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/js/pages/sweet-alerts.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/js/pages/sweet-alerts.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/libs/bootstrap-editable/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/libs/bootstrap-editable/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/libs/select2/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/libs/select2/js/select2.full.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/assets/libs/select2/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/libs/select2/js/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Blog/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Blog/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Business/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Business/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Content/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Package/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Package/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/adminmaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/adminmaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/css.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Partials/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Partials/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Portfolio/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Portfolio/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Portfolio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Portfolio/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Portfolio/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Portfolio/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Backend/Services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Services/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/Slider/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/Slider/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
@@ -221,7 +225,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../onartgroup" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -236,11 +240,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\Label" />
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\tags" />
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\tagsinput" />
+      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\Sweetalert" />
       <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra\jquery" />
-      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\extra" />
-      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\css" />
-      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\js" />
-      <recent name="C:\xampp\htdocs\sakasoftware\public\backend\assets\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -295,7 +299,14 @@
       <workItem from="1607382058138" duration="704000" />
       <workItem from="1607515601005" duration="5630000" />
       <workItem from="1607553396653" duration="4583000" />
-      <workItem from="1607680781596" duration="804000" />
+      <workItem from="1607680781596" duration="11865000" />
+      <workItem from="1607721512126" duration="3365000" />
+      <workItem from="1607885094955" duration="6346000" />
+      <workItem from="1607956722597" duration="1956000" />
+      <workItem from="1607980571157" duration="3565000" />
+      <workItem from="1607986600568" duration="943000" />
+      <workItem from="1608065602132" duration="24000" />
+      <workItem from="1608113446903" duration="4843000" />
     </task>
     <servers />
   </component>

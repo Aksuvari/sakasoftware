@@ -33,7 +33,8 @@ class sliderController extends Controller
         $sliders->created_at=now();
         $sliders->updated_at=now();
         $sliders->save();
-        return back();
+        return redirect()->route('Sliders.index')->with('success','Ekleme işlemi tamamladı');
+
 
     }
     public function edit($id){

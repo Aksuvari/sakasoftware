@@ -2,7 +2,8 @@
 @section('title')
     Manager Panel
 @endsection
-@section('css')
+@section('page_css')
+    <link href="{{asset('backend/assets/extra/tags/bootstrap-tags.css')}}" rel="stylesheet"/>
 @endsection
 @section('page_title')
     Saka Software Yönetim Paneline Hoş Geldiniz.
@@ -25,12 +26,12 @@
 
                             <thead>
                             <tr>
-                                <th> <i class="bx-menu"></i> </th>
-                                <th>Başlık</th>
-                                <th>Durumu</th>
-                                <th>Slider Gözüksün</th>
-                                <th>Anasayfa'da Gözüksün</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i> </th>
+                                <th class="text-center">Başlık</th>
+                                <th class="text-center">Durumu</th>
+                                <th class="text-center">Slider Gözüksün</th>
+                                <th class="text-center">Anasayfa'da Gözüksün</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Blogs.rankSetter')}}">
@@ -41,7 +42,7 @@
 
                                     <tr id="ord-{{$blogs->id}}">
                                         <td class="ordericon">
-                                            #
+                                            #{{$blogs->id}}
                                         </td>
                                         <td class="text-center">{{$blogs->title}}</td>
 
@@ -62,7 +63,20 @@
                                         </td>
 
                                         <td class="text-center">
-                                            <input  class="switch" d="toggle-one" type="checkbox" checked data-toggle="toggle" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger">
+                                            <form action="{{ route('Blogs.sliderView',$blogs->id) }}" method="post">
+                                                @csrf
+                                                <input
+                                                    type="checkbox"
+                                                    data-url="{{ route('Blogs.sliderView',$blogs->id) }}"
+                                                    class="sliderView"
+                                                    type="checkbox"
+                                                    id="slider{{$blogs->id}}"
+                                                    switch="bool"
+                                                    {{($blogs->slider) ? "checked" : ""}}
+                                                />
+                                                <label for="slider{{$blogs->id}}" data-on-label="Aktif"
+                                                       data-off-label="Pasif"></label>
+                                            </form>
                                         </td>
 
                                         <td class="text-center">
@@ -81,25 +95,13 @@
                                                        data-off-label="Pasif"></label>
                                             </form>
                                         </td>
-
-                                        {{--   <td>
-                                               <div class=" row text-center">
-
-                                                   <div class="col-lg-4">
-                                                       <a href="{{route('Blogs.edit'),$blogs->id}}" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
-                                                   </div>
-                                                   <div class="col-lg-2">
-                                                       <a href="{{route('Blogs.delete',$blogs->id)}}" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
-                                                   </div>
-                                               </div>
-                                           </td> --}}
                                             <td class="text-center">
                                                  <div class="button-items">
-                                                    <form action="{{route('Blogs.edit',$blogs->id)}}" >
+                                                    <form action="{{route('Blogs.edit',$blogs->id)}}"  class="icform" >
                                                         @csrf
                                                         <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
                                                     </form>
-                                                     <form action="{{route('Blogs.delete',$blogs->id)}}" method="post" >
+                                                     <form action="{{route('Blogs.delete',$blogs->id)}}" method="post"  class="icform" >
                                                          @csrf
                                                          <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                      </form>
@@ -121,9 +123,5 @@
 @endsection
 
 @section('script')
-    <script>
-        $(function() {
-            $('#toggle-one').bootstrapToggle();
-        })
-    </script>
+
 @endsection

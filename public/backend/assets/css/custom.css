@@ -1,6 +1,44 @@
+table th {
+    text-align: center !important;
+}
 .ordericon {
     text-align: center !important;
 }
-sortable{
+.sortable{
     cursor: move;
 }
+
+.icform {
+    display: inline !important;
+}
+
+.content_image {
+    display: none !important;
+}
+
+.content_video {
+    display: none !important;
+}
+#incoming {
+    cursor: pointer;
+}
+#sender {
+    cursor: pointer;
+}
+#deleting {
+    cursor: pointer;
+}
+
+.message-list li .col-mail-1 {
+    width: 450px !important;
+}
+
+.message-list li .col-mail-2 {
+    position: absolute;
+    top: 0;
+    left: 500px !important;
+    right: 0;
+    bottom: 0;
+}
+
+

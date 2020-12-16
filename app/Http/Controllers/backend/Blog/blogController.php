@@ -113,5 +113,14 @@ class blogController extends Controller
             $blog->save();
         }
     }
+    public function sliderView($id)
+    {
+        if ($id) {
+            $blog = BlogModel::find($id);
+            $sliderr = (request('data') == "true") ? 1 : 0;
+            $blog->slider = $sliderr;
+            $blog->save();
+        }
+    }
 
 }

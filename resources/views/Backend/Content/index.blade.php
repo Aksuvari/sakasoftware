@@ -25,13 +25,13 @@
 
                             <thead>
                             <tr>
-                                <th> <i class="bx-menu"></i> </th>
-                                <th>Başlık</th>
-                                <th>Kategori</th>
-                                <th>Durumu</th>
-                                <th>Slider Gözüksün</th>
-                                <th>Anasayfa'da Gözüksün</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i> </th>
+                                <th class="text-center">Başlık</th>
+                                <th class="text-center">Kategori</th>
+                                <th class="text-center">Durumu</th>
+                                <th class="text-center">Slider Gözüksün</th>
+                                <th class="text-center">Anasayfa'da Gözüksün</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Contents.rankSetter')}}">
@@ -42,7 +42,7 @@
 
                                     <tr id="{{$content->id}}">
                                         <td class="text-center">
-                                            <i class="bx-menu"></i>
+                                            <i class="bx bx-menu"></i>
                                         </td>
                                         <td class="text-center">{{$content->title}}</td>
                                         <td class="text-center">{{$content->getCategory->name}}</td>
@@ -61,9 +61,21 @@
                                                 <label for="switch{{$content->id}}" data-on-label="Aktif" data-off-label="Pasif"></label>
                                             </form>
                                         </td>
-
                                         <td class="text-center">
-                                            <input  class="switch" d="toggle-one" type="checkbox" checked data-toggle="toggle" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger">
+                                            <form action="{{ route('Contents.sliderView',$content->id) }}" method="post">
+                                                @csrf
+                                                <input
+                                                    type="checkbox"
+                                                    data-url="{{ route('Contents.sliderView',$content->id) }}"
+                                                    class="sliderView"
+                                                    type="checkbox"
+                                                    id="slider{{$content->id}}"
+                                                    switch="bool"
+                                                    {{($content->slider) ? "checked" : ""}}
+                                                />
+                                                <label for="slider{{$content->id}}" data-on-label="Aktif"
+                                                       data-off-label="Pasif"></label>
+                                            </form>
                                         </td>
 
                                         <td class="text-center">
@@ -83,24 +95,14 @@
                                             </form>
                                         </td>
 
-                                        {{--   <td>
-                                               <div class=" row text-center">
 
-                                                   <div class="col-lg-4">
-                                                       <a href="{{route('Blogs.edit'),$blogs->id}}" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
-                                                   </div>
-                                                   <div class="col-lg-2">
-                                                       <a href="{{route('Blogs.delete',$blogs->id)}}" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
-                                                   </div>
-                                               </div>
-                                           </td> --}}
                                         <td class="text-center">
                                             <div class="button-items">
-                                                <form action="{{route('Contents.edit',$content->id)}}" >
+                                                <form action="{{route('Contents.edit',$content->id)}}"  class="icform" >
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
                                                 </form>
-                                                <form action="{{route('Contents.delete',$content->id)}}" method="post" >
+                                                <form action="{{route('Contents.delete',$content->id)}}" method="post"   class="icform">
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                 </form>

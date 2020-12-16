@@ -25,26 +25,26 @@
 
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Proje Adı</th>
-                                <th>Müşteri Adı</th>
-                                <th>İlgilenen Kişi</th>
-                                <th>Yapan Kişi</th>
-                                <th>Müşteri Tel no</th>
-                                <th>Not</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i> </th>
+                                <th class="text-center">Proje Adı</th>
+                                <th class="text-center">Müşteri Adı</th>
+                                <th class="text-center">İlgilenen Kişi</th>
+                                <th class="text-center">Yapan Kişi</th>
+                                <th class="text-center">Müşteri Tel no</th>
+                                <th class="text-center">Not</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody>
                                 @foreach($business as $busines)
                                  @csrf
                             <tr>
-                                <th scope="row">1</th>
-                                <td>{{$busines->title}}</td>
-                                <td>{{$busines->costumer_name}}</td>
-                                <td>{{$busines->costumer_contact}}</td>
-                                <td>{{$busines->aut_name}}</td>
-                                <td>{{$busines->aut_maker_name}}</td>
+                                <th  class="text-center" scope="row">{{$busines->id}}</th>
+                                <td class="text-center">{{$busines->title}}</td>
+                                <td class="text-center">{{$busines->costumer_name}}</td>
+                                <td class="text-center">{{$busines->costumer_contact}}</td>
+                                <td class="text-center">{{$busines->aut_name}}</td>
+                                <td class="text-center">{{$busines->aut_maker_name}}</td>
                                 <td class="text-center">
 
                                         <div class=" text-center">
@@ -56,7 +56,7 @@
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title mt-0" id="mySmallModalLabel">Small modal</h5>
+                                                        <h5 class="modal-title mt-0" id="mySmallModalLabel">Not Detayı</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">×</span>
                                                         </button>
@@ -83,16 +83,6 @@
                                         </div>
                                     </div>
                                 </td>
-                                {{-- <td class="text-center">
-                                      <div class="button-items">
-                                          <a href=""
-                                             class="btn btn-outline-primary waves-effect waves-light btn-sm">Düzenle</a>
-                                          <form action="" method="post" >
-                                              <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
-                                          </form>
-                                      </div>
-
-                                  </td>--}}
 
                             </tr>
                             @endforeach

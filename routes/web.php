@@ -9,7 +9,7 @@ use App\Http\Controllers\backend\Slider\sliderController;
 use App\Http\Controllers\backend\Blog\blogController;
 use App\Http\Controllers\backend\Content\contentController;
 use App\Http\Controllers\backend\Service\serviceController;
-use App\Http\Controllers\backend\Portfolyo\portfolyoController;
+use App\Http\Controllers\backend\Project\projectController;
 use App\Http\Controllers\backend\Package\packageController;
 use App\Http\Controllers\deneme;
 
@@ -43,77 +43,79 @@ Route::resource('business','backend\Business\businesscontroller');
 Route::get('businessdelete/{id}','backend\Business\businesscontroller@delete')->name('delete');
 
 Route::name('Sliders.')->group(function (){
-    Route::get('slidercreate',[sliderController::class,'create'])->name('create');
+    Route::get('slider/create',[sliderController::class,'create'])->name('create');
     Route::get('slider',[sliderController::class,'index'])->name('index');
-    Route::post('sliderstore',[sliderController::class,'store'])->name('store');
-    Route::get('slideredit/{id}',[sliderController::class,'edit'])->name('edit');
-    Route::put('sliderupdate/{id}',[sliderController::class,'update'])->name('update');
-    Route::post('sliderdelete/{id}',[sliderController::class,'delete'])->name('delete');
+    Route::post('slider/store',[sliderController::class,'store'])->name('store');
+    Route::get('slider/edit/{id}',[sliderController::class,'edit'])->name('edit');
+    Route::put('slider/update/{id}',[sliderController::class,'update'])->name('update');
+    Route::post('slider/delete/{id}',[sliderController::class,'delete'])->name('delete');
 
-    Route::post('sliderisActiveSetter/{id}', [sliderController::class,'isActiveSetter'])->name('isActiveSetter');
-    Route::post('sliderrankSetter', [sliderController::class,'rankSetter'])->name('rankSetter');
+    Route::post('slider/isActiveSetter/{id}', [sliderController::class,'isActiveSetter'])->name('isActiveSetter');
+    Route::post('slider/rankSetter', [sliderController::class,'rankSetter'])->name('rankSetter');
 });
 
 Route::name('Blogs.')->group(function (){
     Route::get('blog',[blogController::class,'index'])->name('index');
-    Route::get('blogcreate',[blogController::class,'create'])->name('create');
-    Route::post('blogstore',[blogController::class,'store'])->name('store');
-    Route::get('blogedit/{id}',[blogController::class,'edit'])->name('edit');
-    Route::put('blogupdate/{id}',[blogController::class,'update'])->name('update');
-    Route::post('blogdelete/{id}',[blogController::class,'delete'])->name('delete');
+    Route::get('blog/create',[blogController::class,'create'])->name('create');
+    Route::post('blog/store',[blogController::class,'store'])->name('store');
+    Route::get('blog/edit/{id}',[blogController::class,'edit'])->name('edit');
+    Route::put('blog/update/{id}',[blogController::class,'update'])->name('update');
+    Route::post('blog/delete/{id}',[blogController::class,'delete'])->name('delete');
 
-    Route::post('bloghomePageView/{id}',[blogController::class,'homePageView'])->name('homePageView');
-    Route::post('blogrankSetter',[blogController::class,'rankSetter'])->name('rankSetter');
-    Route::post('blogisActiveSetter/{id}',[blogController::class,'isActiveSetter'])->name('isActiveSetter');
+    Route::post('blog/homePageView/{id}',[blogController::class,'homePageView'])->name('homePageView');
+    Route::post('blog/sliderView/{id}',[blogController::class,'sliderView'])->name('sliderView');
+    Route::post('blog/rankSetter',[blogController::class,'rankSetter'])->name('rankSetter');
+    Route::post('blog/isActiveSetter/{id}',[blogController::class,'isActiveSetter'])->name('isActiveSetter');
 });
 
     Route::name('Contents.')->group(function (){
         Route::get('content',[contentController::class,'index'])->name('index');
-        Route::get('contentcreate',[contentController::class,'create'])->name('create');
-        Route::post('contentstore',[contentController::class,'store'])->name('store');
-        Route::get('contentedit/{id}',[contentController::class,'edit'])->name('edit');
-        Route::put('contentupdate/{id}',[contentController::class,'update'])->name('update');
+        Route::get('content/create',[contentController::class,'create'])->name('create');
+        Route::post('content/store',[contentController::class,'store'])->name('store');
+        Route::get('content/edit/{id}',[contentController::class,'edit'])->name('edit');
+        Route::put('content/update/{id}',[contentController::class,'update'])->name('update');
         Route::post('content/delete/{id}',[contentController::class,'delete'])->name('delete');
 
-        Route::post('contenthomePageView/{id}',[contentController::class,'homePageView'])->name('homePageView');
-        Route::post('contentisActiveSetter/{id}',[contentController::class,'isActiveSetter'])->name('isActiveSetter');
-        Route::post('contentrankSetter', [contentController::class,'rankSetter'])->name('rankSetter');
+        Route::post('content/homePageView/{id}',[contentController::class,'homePageView'])->name('homePageView');
+        Route::post('content/sliderView/{id}',[contentController::class,'sliderView'])->name('sliderView');
+        Route::post('content/isActiveSetter/{id}',[contentController::class,'isActiveSetter'])->name('isActiveSetter');
+        Route::post('content/rankSetter', [contentController::class,'rankSetter'])->name('rankSetter');
     });
 
     Route::name('Services.')->group(function (){
         Route::get('service',[serviceController::class,'index'])->name('index');
-        Route::get('servicecreate',[serviceController::class,'create'])->name('create');
-        Route::post('servicestore',[serviceController::class,'store'])->name('store');
-        Route::get('serviceedit/{id}',[serviceController::class,'edit'])->name('edit');
-        Route::put('serviceupdate/{id}',[serviceController::class,'update'])->name('update');
-        Route::post('servicedelete/{id}',[serviceController::class,'delete'])->name('delete');
+        Route::get('service/create',[serviceController::class,'create'])->name('create');
+        Route::post('service/store',[serviceController::class,'store'])->name('store');
+        Route::get('service/edit/{id}',[serviceController::class,'edit'])->name('edit');
+        Route::put('service/update/{id}',[serviceController::class,'update'])->name('update');
+        Route::post('service/delete/{id}',[serviceController::class,'delete'])->name('delete');
 
-        Route::post('servicehomePageView/{id}',[serviceController::class,'homePageView'])->name('homePageView');
-        Route::post('servicerankSetter',[serviceController::class,'rankSetter'])->name('rankSetter');
-        Route::post('serviceisActiveSetter/{id}',[serviceController::class,'isActiveSetter'])->name('isActiveSetter');
+        Route::post('service/homePageView/{id}',[serviceController::class,'homePageView'])->name('homePageView');
+        Route::post('service/rankSetter',[serviceController::class,'rankSetter'])->name('rankSetter');
+        Route::post('service/isActiveSetter/{id}',[serviceController::class,'isActiveSetter'])->name('isActiveSetter');
     });
     Route::name('Ports.')->group(function (){
-        Route::get('portfolio',[portfolyoController::class,'index'])->name('index');
-        Route::get('portfoliocreate',[portfolyoController::class,'create'])->name('create');
-        Route::post('portfoliostore',[portfolyoController::class,'store'])->name('store');
-        Route::get('portfolioedit/{id}',[portfolyoController::class,'edit'])->name('edit');
-        Route::put('portfolioupdate/{id}',[portfolyoController::class,'update'])->name('update');
-        Route::post('portfoliodelete/{id}',[portfolyoController::class,'delete'])->name('delete');
+        Route::get('portfolyo',[projectController::class,'index'])->name('index');
+        Route::get('portfolyo/create',[projectController::class,'create'])->name('create');
+        Route::post('portfolyo/store',[projectController::class,'store'])->name('store');
+        Route::get('portfolyo/edit/{id}',[projectController::class,'edit'])->name('edit');
+        Route::put('portfolyo/update/{id}',[projectController::class,'update'])->name('update');
+        Route::post('portfolyo/delete/{id}',[projectController::class,'delete'])->name('delete');
 
-        Route::post('portfoliorankSetter',[portfolyoController::class,'rankSetter'])->name('rankSetter');
-        Route::post('portfolioisActiveSetter/{id}',[portfolyoController::class,'isActiveSetter'])->name('isActiveSetter');
+        Route::post('portfolyo/rankSetter',[projectController::class,'rankSetter'])->name('rankSetter');
+        Route::post('portfolyo/isActiveSetter/{id}',[projectController::class,'isActiveSetter'])->name('isActiveSetter');
     });
     Route::name('Packages.')->group(function (){
         Route::get('package',[packageController::class,'index'])->name('index');
-        Route::get('packagecreate',[packageController::class,'create'])->name('create');
-        Route::post('packagestore',[packageController::class,'store'])->name('store');
-        Route::get('packageedit/{id}',[packageController::class,'edit'])->name('edit');
-        Route::put('packageupdate/{id}',[packageController::class,'update'])->name('update');
-        Route::post('packagedelete/{id}',[packageController::class,'delete'])->name('delete');
+        Route::get('package/create',[packageController::class,'create'])->name('create');
+        Route::post('package/store',[packageController::class,'store'])->name('store');
+        Route::get('package/edit/{id}',[packageController::class,'edit'])->name('edit');
+        Route::put('package/update/{id}',[packageController::class,'update'])->name('update');
+        Route::post('package/delete/{id}',[packageController::class,'delete'])->name('delete');
 
-        Route::post('packagehomePageView/{id}',[packageController::class,'homePageView'])->name('homePageView');
-        Route::post('packagerankSetter',[packageController::class,'rankSetter'])->name('rankSetter');
-        Route::post('packageisActiveSetter/{id}',[packageController::class,'isActiveSetter'])->name('isActiveSetter');
+        Route::post('package/homePageView/{id}',[packageController::class,'homePageView'])->name('homePageView');
+        Route::post('package/rankSetter',[packageController::class,'rankSetter'])->name('rankSetter');
+        Route::post('package/isActiveSetter/{id}',[packageController::class,'isActiveSetter'])->name('isActiveSetter');
     });
 
 

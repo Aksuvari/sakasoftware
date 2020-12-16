@@ -23,14 +23,14 @@
                             <div class="btn-toolbar">
                                 </table>
                                 </div>
-                                <table id="tech-companies-1" class="table table-striped sortable table-bordered content-container" >
+                                <table id="form" class="table table-striped sortable table-bordered content-container" >
                                     <thead>
                                     <tr>
-                                        <th> <i class="bx-menu"></i> </th>
-                                        <th id="tech-companies-1-col-0">Başlık</th>
-                                        <th data-priority="1" id="tech-companies-1-col-1">Görseller</th>
-                                        <th data-priority="3" id="tech-companies-1-col-2">Durumu</th>
-                                        <th data-priority="1" id="tech-companies-1-col-3">İşlemler</th>
+                                        <th  class="text-center"> <i class="bx bx-menu"></i> </th>
+                                        <th  class="text-center" >Başlık</th>
+                                        <th class="text-center" >Görseller</th>
+                                        <th  class="text-center">Durumu</th>
+                                        <th class="text-center" >İşlemler</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -41,7 +41,7 @@
                                     @foreach($sliders as $slider)
                                     <tr id="ord-{{$slider->id}}">
                                         <td class="text-center">
-                                           <i class="bx-menu"></i>
+                                           <i class="bx bx-menu"></i>
                                         </td>
                                         <td class="text-center">
                                             {{$slider->title}}
@@ -66,13 +66,10 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="button-items">
-                                                <form action="{{route('Sliders.edit',$slider->id)}}" >
+                                                <a href="{{route('Sliders.edit',$slider->id)}}" class="btn btn-outline-primary waves-effect waves-light btn-sm">Düzenle</a>
+                                                <form action="{{route('Sliders.delete',$slider->id)}}" method="post" onclick="confirmDelete()"  class="icform">
                                                     @csrf
-                                                    <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
-                                                </form>
-                                                <form action="{{route('Sliders.delete',$slider->id)}}" method="post" >
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
+                                                    <button type="submit"  class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                 </form>
                                             </div>
 
@@ -97,7 +94,8 @@
 @endsection
 
 @section('script')
-
 <script src="{{asset('backend/assets/libs/admin-resources/rwd-table/rwd-table.min.js')}}"></script>
+    <script>
 
+    </script>
 @endsection

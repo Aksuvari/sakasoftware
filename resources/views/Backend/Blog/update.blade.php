@@ -2,7 +2,8 @@
 @section('title')
     Manager Panel
 @endsection
-@section('css')
+@section('page_css')
+
 @endsection
 @section('page_title')
     Saka Software Yönetim Paneline Hoş Geldiniz.
@@ -68,4 +69,5 @@
                 console.error( error );
             } );
     </script>
+
 @endsection

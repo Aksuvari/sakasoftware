@@ -60,7 +60,40 @@ $(document).ready(function () {
         });
     });
 
+    $(".formuDoldur").on('click', function () {
+        $("#iletisimFormu").style.display == 'block';
+    });
+
     $(".button_usage_btn").change(function () {
         $(".button-information-container").slideToggle();
     })
+    $('#mailmenu').on('click', 'li', function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    });
+
+    $('#sendEmail').click(function () {
+        document.getElementById('sendmailDiv').style.display = "";
+        document.getElementById('inbox').style.display = "none";
+
+    });
+    $('#incoming').click(function () {
+        document.getElementById('sendmailDiv').style.display = "none";
+        document.getElementById('inbox').style.display = "";
+        document.getElementById('incomingDiv').style.display = "";
+        document.getElementById('sendingDiv').style.display = "none";
+        document.getElementById('deletingDiv').style.display = "none";
+
+    });
+    $('#sender').click(function () {
+        document.getElementById('incomingDiv').style.display = "none";
+        document.getElementById('sendingDiv').style.display = "";
+        document.getElementById('deletingDiv').style.display = "none";
+
+    });
+    $('#deleting').click(function () {
+        document.getElementById('incomingDiv').style.display = "none";
+        document.getElementById('sendingDiv').style.display = "none";
+        document.getElementById('deletingDiv').style.display = "";
+
+    });
 });

@@ -24,11 +24,11 @@
 
                             <thead>
                             <tr>
-                                <th> <i class="bx-menu"></i> </th>
-                                <th>Başlık</th>
-                                <th>Durumu</th>
-                                <th>Anasayfa'da Gözüksün</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i> </th>
+                                <th class="text-center">Başlık</th>
+                                <th class="text-center">Durumu</th>
+                                <th class="text-center">Anasayfa'da Gözüksün</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Packages.rankSetter')}}">
@@ -39,7 +39,7 @@
 
                                     <tr id="{{$package->id}}">
                                         <td class="text-center">
-                                            <i class="bx-menu"></i>
+                                            <i class="bx bx-menu"></i>
                                         </td>
                                         <td class="text-center">{{$package->title}}</td>
                                         <td class="text-center">
@@ -75,24 +75,14 @@
                                             </form>
                                         </td>
 
-                                        {{--   <td>
-                                               <div class=" row text-center">
-
-                                                   <div class="col-lg-4">
-                                                       <a href="{{route('Blogs.edit'),$blogs->id}}" title="Düzenle" class="btn btn-outline-primary waves-effect waves-light btn-sm"> Düzenle</a>
-                                                   </div>
-                                                   <div class="col-lg-2">
-                                                       <a href="{{route('Blogs.delete',$blogs->id)}}" title="Sil" class="btn btn-outline-danger waves-effect waves-light btn-sm"> Sil</a>
-                                                   </div>
-                                               </div>
-                                           </td> --}}
                                         <td class="text-center">
                                             <div class="button-items">
-                                                <form action="{{route('Packages.edit',$package->id)}}" >
+                                                <form action="{{route('Packages.edit',$package->id)}}"  class="icform" >
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
                                                 </form>
-                                                <form action="{{route('Packages.delete',$package->id)}}" method="post" >
+                                                <form action="{{route('Packages.delete',$package->id)}}" method="post"  class="icform" onsubmit="return confirm('Bu veriyi silmek istiyor musunuz ?')" >
+
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                 </form>
@@ -114,9 +104,5 @@
 @endsection
 
 @section('script')
-    <script>
-        $(function() {
-            $('#toggle-one').bootstrapToggle();
-        })
-    </script>
+
 @endsection

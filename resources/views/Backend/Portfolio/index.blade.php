@@ -24,50 +24,50 @@
 
                             <thead>
                             <tr>
-                                <th> <i class="bx-menu"></i></th>
-                                <th>Proje Adı</th>
-                                <th>Proje Türü</th>
-                                <th>Proje Url</th>
-                                <th>Durumu</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i></th>
+                                <th class="text-center">Proje Adı</th>
+                                <th class="text-center">Proje Türü</th>
+                                <th class="text-center">Proje Url</th>
+                                <th class="text-center">Durumu</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Ports.rankSetter')}}">
 
                             <form action="{{route('Ports.rankSetter')}}" method="post">
                                 @csrf
-                                @foreach($ports as $port)
+                                @foreach($projects as $project)
 
-                                    <tr id="{{$port->id}}">
+                                    <tr id="{{$project->id}}">
                                         <td class="text-center">
-                                            <i class="bx-menu"></i>
+                                            <i class="bx bx-menu"></i>
                                         </td>
-                                        <td class="text-center">{{$port->title}}</td>
-                                        <td class="text-center">{{$port->getType->name}}</td>
-                                        <td class="text-center">{{$port->project_url}}</td>
+                                        <td class="text-center">{{$project->title}}</td>
+                                        <td class="text-center">{{$project->getProject->name}}</td>
+                                        <td class="text-center">{{$project->project_url}}</td>
                                         <td class="text-center">
-                                            <form action="{{ route('Ports.isActiveSetter',$port->id)}}" method="post">
+                                            <form action="{{ route('Ports.isActiveSetter',$project->id)}}" method="post">
                                                 @csrf
                                                 <input
                                                     type="checkbox"
-                                                    data-url="{{route('Ports.isActiveSetter',$port->id) }}"
+                                                    data-url="{{route('Ports.isActiveSetter',$project->id) }}"
                                                     class="isActive"
                                                     type="checkbox"
-                                                    id="switch{{$port->id}}"
+                                                    id="switch{{$project->id}}"
                                                     switch="bool"
-                                                    {{($port->isActive) ? "checked" : ""}}
+                                                    {{($project->isActive) ? "checked" : ""}}
                                                 />
-                                                <label for="switch{{$port->id}}" data-on-label="Aktif" data-off-label="Pasif"></label>
+                                                <label for="switch{{$project->id}}" data-on-label="Aktif" data-off-label="Pasif"></label>
                                             </form>
                                         </td>
 
                                         <td class="text-center">
                                             <div class="button-items">
-                                                <form action="{{route('Ports.edit',$port->id)}}" >
+                                                <form action="{{route('Ports.edit',$project->id)}}"  class="icform" >
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
                                                 </form>
-                                                <form action="{{route('Ports.delete',$port->id)}}" method="post" >
+                                                <form action="{{route('Ports.delete',$project->id)}}" method="post"  class="icform" >
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                 </form>

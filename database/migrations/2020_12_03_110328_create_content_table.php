@@ -22,6 +22,8 @@ class CreateContentTable extends Migration
             $table->string('slug');
             $table->tinyInteger('isActive')->default(1);
             $table->tinyInteger('rank')->default(0);
+            $table->tinyInteger('anasayfa')->default('0');
+            $table->tinyInteger('slider')->default('0');
             $table->timestamps();
             $table->foreign('category_id')
                 ->references('id')

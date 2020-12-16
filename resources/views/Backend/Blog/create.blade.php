@@ -2,7 +2,8 @@
 @section('title')
     Manager Panel
 @endsection
-@section('css')
+@section('page_css')
+
 @endsection
 @section('page_title')
     Saka Software Yönetim Paneline Hoş Geldiniz.
@@ -12,7 +13,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Blog Yönetimi Yönetimi</h4>
+                    <h4 class="card-title">Blog Yönetimi</h4>
                     <p class="card-title-desc">Sitemizde bulunan blog'a ait içerikler</p>
                     <form action="{{route('Blogs.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -39,8 +40,8 @@
 
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">Etiketler</label>
-                        <div class="col-md-10">
-                            <input class="form-control" type="text" name="label">
+                        <div class="col-md-10" >
+                            <input class="form-control" type="text" name="label"  data-role="tagsinput" >
                             @error('label')
                             <div class="alert alert-danger"> {{$message}}</div>
                             @enderror
@@ -69,4 +70,6 @@
                 console.error( error );
             } );
     </script>
+    <script src="{{asset('backend/assets/extra/Label/bootstrap-tagsinput.min.js')}}"></script>
+
 @endsection

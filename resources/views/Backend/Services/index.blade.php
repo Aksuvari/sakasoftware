@@ -25,11 +25,11 @@
 
                             <thead>
                             <tr>
-                                <th> <i class="bx-menu"></i> </th>
-                                <th>Başlık</th>
-                                <th>Durumu</th>
-                                <th>Anasayfa'da Gözüksün</th>
-                                <th>İşlemler</th>
+                                <th class="text-center"> <i class="bx bx-menu"></i> </th>
+                                <th class="text-center">Başlık</th>
+                                <th class="text-center">Durumu</th>
+                                <th class="text-center">Anasayfa'da Gözüksün</th>
+                                <th class="text-center">İşlemler</th>
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Services.rankSetter')}}">
@@ -78,11 +78,11 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="button-items">
-                                                <form action="{{route('Services.edit',$service->id)}}" >
+                                                <form action="{{route('Services.edit',$service->id)}}"  class="icform">
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-primary waves-effect waves-light btn-sm" >Düzenle</button>
                                                 </form>
-                                                <form action="{{route('Services.delete',$service->id)}}" method="post" >
+                                                <form action="{{route('Services.delete',$service->id)}}" method="post"  class="icform" >
                                                     @csrf
                                                     <button type="submit" class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
                                                 </form>
