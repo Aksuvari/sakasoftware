@@ -40,7 +40,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Etiketler</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="label">
+                                <input class="form-control" type="text" name="label" value="{{$blog->label}}" data-role="tagsinput">
                                 @error('label')
                                 <div class="alert alert-danger"> {{$message}}</div>
                                 @enderror

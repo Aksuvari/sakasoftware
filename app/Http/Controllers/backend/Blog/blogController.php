@@ -42,8 +42,10 @@ class blogController extends Controller
         $blog->updated_at=now();
         $blog->created_at=now();
         $blog->save();
-        return back()->with("status", "Your message has been received, We'll get back to you shortly.");
+
+        return redirect()->route('Blogs.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
+
 
     public function edit($id){
         $blog=BlogModel::find($id);
@@ -70,15 +72,28 @@ class blogController extends Controller
         $blog->updated_at=now();
         $blog->created_at=now();
         $blog->save();
-        return redirect()->route('Blogs.index');
+        return redirect()->route('Blogs.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');
     }
 
 
 
     public function delete(int $id)
     {
-        BlogModel::find($id)->delete();
-        return redirect()->route('Blogs.index');
+
+        $delete = BlogModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "Blog Yazısı Silindi.";
+        } else {
+            $success = false;
+            $message = "Blog Yazısı Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
     }
 
     public function homePageView($id)

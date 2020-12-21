@@ -72,11 +72,23 @@ class packageController extends Controller
         $packages->updated_at=now();
         $packages->created_at=now();
         $packages->save();
-        return redirect()->route('Packages.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
+        return redirect()->route('Packages.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');
     }
     public function delete(int $id){
-        PackageModel::find($id)->delete();
-        return redirect()->route('Packages.index');
+        $delete = PackageModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "Paket Yazısı Silindi.";
+        } else {
+            $success = false;
+            $message = "Paket Yazısı Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
 
     }
     public function homePageView($id)

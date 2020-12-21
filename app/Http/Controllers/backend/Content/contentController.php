@@ -43,7 +43,7 @@ class contentController extends Controller
         $contents->updated_at=now();
         $contents->created_at=now();
         $contents->save();
-        return back();
+        return redirect()->route('Contents.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');;
     }
     public function edit($id){
         $contents=ContentModel::findOrFail($id);
@@ -74,11 +74,23 @@ class contentController extends Controller
         $contents->updated_at=now();
         $contents->created_at=now();
         $contents->save();
-        return redirect()->route('Contents.index');
+        return redirect()->route('Contents.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
     }
     public function delete(int $id){
-        ContentModel::find($id)->delete();
-        return redirect()->route('Contents.index');
+        $delete = ContentModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "İçerik Yazısı Silindi.";
+        } else {
+            $success = false;
+            $message = "İçerik Yazısı Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
     }
     public function rankSetter()
     {

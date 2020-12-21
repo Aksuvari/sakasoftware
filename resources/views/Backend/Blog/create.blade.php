@@ -37,7 +37,6 @@
                             </div>
                         </div>
 
-
                     <div class="form-group row">
                         <label for="example-text-input" class="col-md-2 col-form-label">Etiketler</label>
                         <div class="col-md-10" >

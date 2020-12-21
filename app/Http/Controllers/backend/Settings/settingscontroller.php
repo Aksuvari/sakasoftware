@@ -102,9 +102,9 @@ class settingscontroller extends Controller
         }
         $setting->save();
         if ($setting){
-            return back()->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
+            return redirect()->route('webSetting.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
         }else{
-            return back()->with('Error','Kayıt İşlemi Sırasında Hata Oluştu');
+            return  redirect()->route('webSetting.index')->with('Error','Kayıt İşlemi Sırasında Hata Oluştu');
         }
     }
 

@@ -1,0 +1,11 @@
+<script src="{{'frontend/assets/js/vendor/modernizr-3.6.0.min.js'}}"></script>
+<script src="{{'frontend/assets/js/vendor/jquery-3.5.0.js'}}"></script>
+<script src="{{'frontend/assets/js/bootstrap.min.js'}}"></script>
+<script src="{{'frontend/assets/js/popper.min.js'}}"></script>
+<script src="{{'frontend/assets/js/slick.min.js'}}"></script>
+<script src="{{'frontend/assets/js/jquery.counterup.min.js'}}"></script>
+<script src="{{'frontend/assets/js/jquery.waypoints.min.js'}}"></script>
+<script src="{{'frontend/assets/js/wow.js'}}"></script>
+<script src="{{'frontend/assets/js/jquery.nice-select.min.js'}}"></script>
+<script src="{{'frontend/assets/js/jquery.magnific-popup.min.js'}}"></script>
+<script src="{{'frontend/assets/js/main.js'}}"></script>

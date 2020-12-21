@@ -34,7 +34,7 @@ class serviceController extends Controller
         $services->updated_at=now();
         $services->created_at=now();
         $services->save();
-        return back();
+        return redirect()->route('Services.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');;
     }
 
     public function edit($id){
@@ -59,13 +59,25 @@ class serviceController extends Controller
         $services->updated_at=now();
         $services->created_at=now();
         $services->save();
-        return redirect()->route('Services.index');
+        return redirect()->route('Services.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
     }
 
     public function delete(int $id)
     {
-        ServiceModel::find($id)->delete();
-        return redirect()->route('Services.index');
+        $delete = ServiceModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "Hizmet Yazısı Silindi.";
+        } else {
+            $success = false;
+            $message = "Hizmet Yazısı Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
     }
 
     public function homePageView($id)

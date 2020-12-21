@@ -33,7 +33,7 @@ class sliderController extends Controller
         $sliders->created_at=now();
         $sliders->updated_at=now();
         $sliders->save();
-        return redirect()->route('Sliders.index')->with('success','Ekleme işlemi tamamladı');
+        return redirect()->route('Sliders.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
 
 
     }
@@ -57,11 +57,23 @@ class sliderController extends Controller
         $sliders->created_at=now();
         $sliders->updated_at=now();
         $sliders->save();
-        return redirect()->route('Sliders.index');
+        return redirect()->route('Sliders.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
     }
     public function delete($id){
-        SliderModel::find($id)->delete();
-        return redirect()->route('Sliders.index');
+        $delete = SliderModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "Slider Silindi.";
+        } else {
+            $success = false;
+            $message = "Slider Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
     }
     public function rankSetter()
     {

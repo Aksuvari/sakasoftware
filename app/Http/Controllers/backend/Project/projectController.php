@@ -42,7 +42,7 @@ class projectController extends Controller
         $projects->updated_at=now();
         $projects->created_at=now();
         $projects->save();
-        return back();
+        return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');;
     }
     public function edit($id){
         $projects=ProjectModel::findOrFail($id);
@@ -72,12 +72,24 @@ class projectController extends Controller
         $projects->updated_at=now();
         $projects->created_at=now();
         $projects->save();
-        return redirect()->route('Ports.index');
+        return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
 
     }
     public function delete(int $id){
-        ProjectModel::findOrFail($id)->delete();
-        return redirect()->route('Ports.index');
+        $delete = ProjectModel::destroy($id);
+
+        if ($delete) {
+            $success = true;
+            $message = "Portfölyö Yazısı Silindi.";
+        } else {
+            $success = false;
+            $message = "Portfölyö Yazısı Bulunamadı.";
+        }
+
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
     }
     public function rankSetter()
     {

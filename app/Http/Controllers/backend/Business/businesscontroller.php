@@ -67,7 +67,7 @@ class businesscontroller extends Controller
         $business->created_at=now();
         $business->save();
 
-        return back()->with('Success','Kayıt işlemi başarıyla gerçekleşti.');
+        return redirect()->route('business.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
 
     /**
@@ -131,7 +131,7 @@ class businesscontroller extends Controller
         $business->created_at=now();
         $business->save();
 
-        return redirect()->route('business.index');
+        return redirect()->route('business.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
     }
 
     /**

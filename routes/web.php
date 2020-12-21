@@ -11,7 +11,7 @@ use App\Http\Controllers\backend\Content\contentController;
 use App\Http\Controllers\backend\Service\serviceController;
 use App\Http\Controllers\backend\Project\projectController;
 use App\Http\Controllers\backend\Package\packageController;
-use App\Http\Controllers\deneme;
+use App\Http\Controllers\frontend\homeController;
 
 
 /*
@@ -29,6 +29,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/',[homeController::class,'homepageshow'])->name('homepage');
+Route::get('/kurumsal',[homeController::class,'kurumsal'])->name('kurumsal');
+Route::get('/hizmetlerimiz',[homeController::class,'hizmet'])->name('hizmet');
+Route::get('/referanslarimiz',[homeController::class,'referans'])->name('referans');
+Route::get('/blog',[homeController::class,'blog'])->name('blog');
+Route::get('/blogdetay/{slug}',[homeController::class,'blogdetay'])->name('blogdetay');
+Route::get('/iletisim',[homeController::class,'contact'])->name('contact');
 
 
 

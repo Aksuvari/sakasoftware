@@ -3,7 +3,7 @@
 <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
 <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 <link href="{{asset('backend/assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
-<link href="{{asset('backend')}}/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+<link href="{{asset('backend/assets/libs/admin-resources/rwd-table/rwd-table.min.css')}}" rel="stylesheet" type="text/css" />
 <link href="{{asset('backend/assets/extra/toastr/toastr.css')}}" rel="stylesheet" />
 <link href="{{asset('backend/assets/extra/Sweetalert/sweetalert2.min.css')}}" rel="stylesheet"/>
 <link href="{{asset('backend/assets/extra/Label/bootstrap-tagsinput.css')}}" rel="stylesheet" type="text/css"/>

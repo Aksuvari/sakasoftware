@@ -67,10 +67,9 @@
                                         <td class="text-center">
                                             <div class="button-items">
                                                 <a href="{{route('Sliders.edit',$slider->id)}}" class="btn btn-outline-primary waves-effect waves-light btn-sm">Düzenle</a>
-                                                <form action="{{route('Sliders.delete',$slider->id)}}" method="post" onclick="confirmDelete()"  class="icform">
-                                                    @csrf
-                                                    <button type="submit"  class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil</button>
-                                                </form>
+                                                <button onclick="deleteConfirmation({{$slider->id}})"
+                                                        class="btn btn-outline-danger waves-effect waves-light btn-sm">Sil
+                                                </button>
                                             </div>
 
                                         </td>
@@ -94,8 +93,43 @@
 @endsection
 
 @section('script')
-<script src="{{asset('backend/assets/libs/admin-resources/rwd-table/rwd-table.min.js')}}"></script>
-    <script>
 
-    </script>
+<script>
+    function deleteConfirmation(id) {
+        swal.fire({
+            title: "Veri Silinecek?",
+            icon: 'question',
+            text: "Emin misiniz?!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonText: "Evet!",
+            cancelButtonText: "İptal",
+            reverseButtons: !0
+        }).then(function (e) {
+            if (e.value === true) {
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    type: 'POST',
+                    url: "{{url('manager/slider/delete')}}/" + id,
+                    data: {_token: CSRF_TOKEN},
+                    dataType: 'JSON',
+                    success: function (results) {
+                        if (results.success === true) {
+                            swal.fire("Başarılı!", results.message, "success");
+                            setTimeout(function(){
+                                location.reload();
+                            },1000);
+                        } else {
+                            swal.fire("Error!", results.message, "error");
+                        }
+                    }
+                });
+            } else {
+                e.dismiss;
+            }
+        }, function (dismiss) {
+            return false;
+        })
+    }
+</script>
 @endsection
