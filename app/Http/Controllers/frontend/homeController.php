@@ -25,7 +25,12 @@ class homeController extends Controller
     }
 
     public function homepageshow(){
-        return view('Frontend.homepage');
+        $contents=ContentModel::where('isActive',1)->orderBy('rank','asc')->get();
+        $projects=ProjectModel::where('isActive',1)->orderBy('rank','asc')->get();
+        $blogs=BlogModel::where('isActive',1)->orderBy('rank','asc')->get();
+
+
+        return view('Frontend.homepage',compact('contents','projects','blogs'));
     }
     public function kurumsal(){
         $contents=ContentModel::where('isActive',1)->orderBy('rank','asc')->get();

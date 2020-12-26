@@ -36,6 +36,9 @@
                             </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                $sayac=0;
+                                ?>
                                 @foreach($business as $busines)
                                  @csrf
                             <tr>
@@ -85,7 +88,20 @@
                                 </td>
 
                             </tr>
+                                 <?php
+                                 $sayac++;
+                                 ?>
                             @endforeach
+                            @if($sayac==0)
+                                <tr>
+
+                                    <td colspan="8" class="text-center">
+                                        <div class="alert alert-danger" role="alert"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    KAYITLAR BULUNAMADI!! Lütfen Yeni Kayıt Yapınız.
+                                                </font></font></div>
+                                    </td>
+                                </tr>
+                                @endif
                             </tbody>
                         </table>
                     </div>

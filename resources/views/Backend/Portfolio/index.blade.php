@@ -33,7 +33,9 @@
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Ports.rankSetter')}}">
-
+                            <?php
+                            $sayac=0;
+                            ?>
                             <form action="{{route('Ports.rankSetter')}}" method="post">
                                 @csrf
                                 @foreach($projects as $project)
@@ -75,7 +77,20 @@
                                         </td>
 
                                     </tr>
+                                    <?php
+                                    $sayac++;
+                                    ?>
                                 @endforeach
+                                @if($sayac==0)
+                                    <tr>
+
+                                        <td colspan="6" class="text-center">
+                                            <div class="alert alert-danger" role="alert"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                        KAYITLAR BULUNAMADI!! Lütfen Yeni Kayıt Yapınız.
+                                                    </font></font></div>
+                                        </td>
+                                    </tr>
+                                @endif
                             </form>
                             </tbody>
                         </table>

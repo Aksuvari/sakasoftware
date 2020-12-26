@@ -36,14 +36,16 @@
                             </tr>
                             </thead>
                             <tbody class="sortable" data-url="{{route('Blogs.rankSetter')}}">
-
+                            <?php
+                            $sayac=0;
+                            ?>
                             <form action="{{route('Blogs.rankSetter')}}" method="post">
                                 @csrf
                                 @foreach($blog as $blogs)
 
                                     <tr id="ord-{{$blogs->id}}">
                                         <td class="ordericon">
-                                            #{{$blogs->id}}
+                                            {{$blogs->id}}
                                         </td>
                                         <td class="text-center">{{$blogs->title}}</td>
 
@@ -114,8 +116,21 @@
                                         </td>
 
                                     </tr>
+                                    <?php
+                                    $sayac++;
+                                    ?>
                                 @endforeach
                             </form>
+                            @if($sayac==0)
+                                <tr>
+
+                                    <td colspan="6" class="text-center">
+                                        <div class="alert alert-danger" role="alert"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    KAYITLAR BULUNAMADI!! Lütfen Yeni Kayıt Yapınız.
+                                                </font></font></div>
+                                    </td>
+                                </tr>
+                            @endif
                             </tbody>
                         </table>
                     </div>

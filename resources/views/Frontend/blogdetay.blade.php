@@ -4,6 +4,23 @@
 
 @endsection
 
+@section('description')
+    {{ strip_tags(\Illuminate\Support\Str::limit($blogs->description,100,'')) }}
+@endsection
+
+@section('keywords')
+    @php
+    $keys = explode('-',convertToSEO(strip_tags(\Illuminate\Support\Str::limit($blogs->description,100,''))));
+    $key = implode(',',$keys);
+
+    @endphp
+    {{ $key }}
+@endsection
+
+@section('pageurl')
+    {{ url('blog') }}/{{ $blogs->slug }}
+@endsection
+
 @section('content')
 
     @php

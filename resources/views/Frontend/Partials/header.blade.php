@@ -8,10 +8,10 @@
                     </div>
                     <div class="offcanvas-social">
                         <ul class="text-center">
-                            <li><a href="$"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a href="$"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="$"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="$"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="{{ \App\Models\SettingModel::first()->facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="{{\App\Models\SettingModel::first()->twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{\App\Models\SettingModel::first()->instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{ \App\Models\SettingModel::first()->youtube }}" target="_blank"><i class="fa fa-youtube"></i></a></li>
                         </ul>
                     </div>
                     <div id="menu" class="text-left ">
@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                     <div class="offcanvas_footer">
-                        <span><a href="mailto:info@sakasoftware.com"><i class="flaticon-message"></i>info@sakasoftware.com</a></span>
+                        <span><a href="mailto:{{ \App\Models\SettingModel::first()->email }}"><i class="flaticon-message"></i>{{ \App\Models\SettingModel::first()->email }}</a></span>
                     </div>
                 </div>
             </div>
@@ -59,9 +59,9 @@
                 <div class="col-lg-12">
                     <div class="header-top">
                         <ul>
-                           <li> <a href="mailto:info@sakasoftware.com"><i class="flaticon-message"></i>info@sakasoftware.com</a></li>
-                            <li><a href="tel:+90 505 563 9 849"><i class="flaticon-phone-call"></i> +90 505 563 9 849</a></li>
-                          <li><a href="#"><i class="flaticon-placeholder"></i>Yenidoğan Mah. Oğulcuklu Cad. Bina No : 15 Mina Apt. Kat : 5 No: 10 Talas / KAYSERİ</a></li>
+                           <li> <a href="mailto:{{ \App\Models\SettingModel::first()->email }}"><i class="flaticon-message"></i>{{ \App\Models\SettingModel::first()->email }}</a></li>
+                            <li><a href="tel:{{ \App\Models\SettingModel::first()->phone_1 }}"><i class="flaticon-phone-call"></i> {{ \App\Models\SettingModel::first()->phone_1 }}</a></li>
+                          <li><a href="#"><i class="flaticon-placeholder"></i>{{\App\Models\SettingModel::first()->address}}</a></li>
                         </ul>
 
                     </div>
@@ -114,10 +114,10 @@
                         </div>
                         <div class="header-social d-flex align-items-center">
                             <ul class="d-none d-lg-block">
-                                <li><a href="$"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="$"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="$"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="$"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="{{ \App\Models\SettingModel::first()->facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="{{\App\Models\SettingModel::first()->twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{{\App\Models\SettingModel::first()->instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="{{ \App\Models\SettingModel::first()->youtube }}" target="_blank"><i class="fa fa-youtube"></i></a></li>
                             </ul>
                             <div class="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                 <i class="fa fa-bars"></i>
