@@ -20,7 +20,7 @@
                     <br>
 
                     <div class="table-responsive">
-                        <table class="table table-bordered mb-0">
+                        <table class="table table-bordered mb-0 content-container">
 
                             <thead>
                             <tr>

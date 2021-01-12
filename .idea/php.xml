@@ -121,6 +121,7 @@
       <path value="$PROJECT_DIR$/vendor/claviska/simpleimage" />
       <path value="$PROJECT_DIR$/vendor/league/color-extractor" />
       <path value="$PROJECT_DIR$/vendor/shekarsiri/simpleimage" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

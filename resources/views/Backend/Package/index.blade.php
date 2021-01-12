@@ -39,9 +39,9 @@
                                 @csrf
                                 @foreach($packages as $package)
 
-                                    <tr id="{{$package->id}}">
-                                        <td class="text-center">
-                                            <i class="bx bx-menu"></i>
+                                    <tr id="ord-{{$package->id}}">
+                                        <td class="ordericon">
+                                            {{$package->id}}
                                         </td>
                                         <td class="text-center">{{$package->title}}</td>
                                         <td class="text-center">

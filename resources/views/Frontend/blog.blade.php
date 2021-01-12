@@ -1,40 +1,44 @@
 @extends('Frontend.Partials.master')
+@section('pagetitle')
+    BLOG
+@endsection
 
 @section('page_css')
 
 @endsection
 
 @section('content')
-    <section class="news-2-area news-page">
+    <section class="main-content">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row">
                 @foreach($blogs as $blog)
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="news-item mt-30">
-
-                        <div class="news-thumb">
-                            <img src="https://sakasoftware.com/uploads/blog/370x316/1596055195.jpeg" alt="Yazılım Nedir? Niye Önemlidir? Yazılım Çeşitleri Nelerdir?">
-                        </div>
-                        <div class="news-content content-container">
-                            <ul>
-                                <li><i class="fa fa-calendar"></i> {{$blog->created_at}}
-                                </li>
-                                <li><i class="fa fa-eye"></i> 149 </li>
-                            </ul>
-                            <h3 class="title">{{$blog->title}}</h3>
-
-                            <a href="{{route('blogdetay',$blog->slug)}}">Devamı<i class="flaticon-right-arrow"></i>
-
+                <div class="col-md-4 col-sm-6">
+                    <article class="main-post">
+                        <div class="featured-post">
+                            <a href="#" title="">
+                                <img src="{{asset('frontend/fnc/images/blog/blog.jpeg')}}" alt="">
                             </a>
-                        </div>
+                        </div><!-- /.featured-post -->
+                        <div class="entry-content">
+                            <div class="date">
+                                {{$blog->created_at}}
+                            </div>
+                            <h3>
+                                {{$blog->title}}
 
-                    </div>
+                            </h3>
+
+                                  <a href="{{route('blogdetay',$blog->slug)}}"><p>  Devamı <i class="fa fa-arrow-right"></i></p>
+                                </a>
+
+
+                        </div><!-- /.entry-content -->
+                    </article>
                 </div>
                 @endforeach
-            </div>
-        </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
     </section>
-
 
 @endsection
 

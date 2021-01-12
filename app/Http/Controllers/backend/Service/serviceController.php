@@ -20,15 +20,18 @@ class serviceController extends Controller
     public function store(Request $request){
         $rules=[
             'title'=>'required',
+            'short_des'=>'required',
             'description'=>'required',
         ];
         $customMessages=[
             'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'short_des.required'=>'Bu Alanı doldurmak zorunludur.',
             'description.required'=>'Bu Alanı doldurmak zorunludur.'
         ];
         $this->validate($request,$rules,$customMessages);
         $services=new ServiceModel;
         $services->title=$request->title;
+        $services->short_des=$request->short_des;
         $services->description=$request->description;
         $services->slug = Str::slug(request('title'),'-');
         $services->updated_at=now();
@@ -45,15 +48,18 @@ class serviceController extends Controller
     public function update(Request $request,$id){
         $rules=[
             'title'=>'required',
+            'short_des'=>'required',
             'description'=>'required',
         ];
         $customMessages=[
             'title.required'=>'Bu Alanı doldurmak zorunludur.',
+            'short_des.required'=>'Bu Alanı doldurmak zorunludur.',
             'description.required'=>'Bu Alanı doldurmak zorunludur.'
         ];
         $this->validate($request,$rules,$customMessages);
         $services=ServiceModel::find($id);
         $services->title=$request->title;
+        $services->short_des=$request->short_des;
         $services->description=$request->description;
         $services->slug = Str::slug(request('title'),'-');
         $services->updated_at=now();

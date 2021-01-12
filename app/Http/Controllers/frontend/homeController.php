@@ -26,19 +26,22 @@ class homeController extends Controller
 
     public function homepageshow(){
         $contents=ContentModel::where('isActive',1)->orderBy('rank','asc')->get();
-        $projects=ProjectModel::where('isActive',1)->orderBy('rank','asc')->get();
         $blogs=BlogModel::where('isActive',1)->orderBy('rank','asc')->get();
-
-
-        return view('Frontend.homepage',compact('contents','projects','blogs'));
+        $services=ServiceModel::where('isActive',1)->orderBy('rank','asc')->get();
+        $projects=ProjectModel::where('isActive',1)->orderBy('rank','asc')->get();
+        return view('Frontend.homepage',compact('contents','blogs','services','projects'));
     }
-    public function kurumsal(){
-        $contents=ContentModel::where('isActive',1)->orderBy('rank','asc')->get();
-        return view('Frontend.kurumsal',compact('contents'))
-            ->with('footerContent',$this->footerContent);
+    public function kurumsal($slug){
+        $contents=ContentModel::where('slug',$slug)->firstOrFail();
+        return view('Frontend.kurumsal',compact('contents'));
     }
     public function hizmet(){
-        return view('Frontend.hizmet');
+        $services=ServiceModel::where('isActive',1)->orderBy('rank','asc')->get();
+        return view('Frontend.hizmet',compact('services'));
+    }
+    public function hizmetdetay($slug){
+        $services=ServiceModel::where('slug',$slug)->firstOrFail();
+        return view('Frontend.hizmetdetay',compact('services'));
     }
     public function referans(){
         $projects=ProjectModel::where('isActive',1)->orderBy('rank','asc')->get();
@@ -54,6 +57,15 @@ class homeController extends Controller
     }
     public function contact(){
         return view('Frontend.contact');
+    }
+    public function contactForm(){
+        $send = sendMail('email.mailverify', "info@sakasoftware.com", "Konu", "denemeyaptık");
+
+        if ($send) {
+            return back();
+        } else {
+            return back();
+        }
     }
 
 }

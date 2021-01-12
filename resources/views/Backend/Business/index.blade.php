@@ -28,9 +28,11 @@
                                 <th class="text-center"> <i class="bx bx-menu"></i> </th>
                                 <th class="text-center">Proje Adı</th>
                                 <th class="text-center">Müşteri Adı</th>
+                                <th class="text-center">Müşteri Tel no</th>
                                 <th class="text-center">İlgilenen Kişi</th>
                                 <th class="text-center">Yapan Kişi</th>
-                                <th class="text-center">Müşteri Tel no</th>
+                                <th class="text-center">İş Baş</th>
+                                <th class="text-center">İş Son</th>
                                 <th class="text-center">Not</th>
                                 <th class="text-center">İşlemler</th>
                             </tr>
@@ -48,6 +50,8 @@
                                 <td class="text-center">{{$busines->costumer_contact}}</td>
                                 <td class="text-center">{{$busines->aut_name}}</td>
                                 <td class="text-center">{{$busines->aut_maker_name}}</td>
+                                <td class="text-center">{{$busines->start_date}}</td>
+                                <td class="text-center">{{$busines->due_date}}</td>
                                 <td class="text-center">
 
                                         <div class=" text-center">

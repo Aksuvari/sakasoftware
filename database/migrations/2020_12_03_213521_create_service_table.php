@@ -17,6 +17,7 @@ class CreateServiceTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
+            $table->String('short_des');
             $table->string('slug');
             $table->tinyInteger('anasayfa')->default('0');
             $table->tinyInteger('isActive')->default(1);

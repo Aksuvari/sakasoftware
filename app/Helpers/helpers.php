@@ -2,6 +2,7 @@
 use App\Models\SettingModel;
 use abeautifulsite\SimpleImage;
 
+
 function dizinolustur($path, $mode = 0777, $recursive = false, $force = false)
 {
     if ($force) {
@@ -42,6 +43,29 @@ function convertToSEO($text)
     return strtolower(str_replace($turkce, $convert, $text));
 
 }
+function sendMail($template, $toMail = "", $subject = "", $message = [])
+{
+    $item = \App\Models\EmailModel::where('isActive', 1)->first();
+    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+    $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->Host = $item->host;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = false;
+    $mail->SMTPAutoTLS = false;
+    $mail->Username = $item->username;
+    $mail->Password = $item->password;
+    $mail->Port = $item->port;
+    $mail->CharSet = 'UTF-8';
+    $mail->WordWrap = 50;
+    $mail->setFrom($item->from, $item->title);
+    $mail->addAddress($toMail);
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body = view($template, compact('message'));
+    return $mail->send();
+}
+
 
 
 

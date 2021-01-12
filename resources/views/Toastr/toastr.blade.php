@@ -1,6 +1,6 @@
 
 <script >
-   /* var options= toastr.options = {
+    var options= toastr.options = {
             "closeButton": true,
             "debug": false,
             "newestOnTop": false,
@@ -16,7 +16,7 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-        }*/
+        }
     @if(\Illuminate\Support\Facades\Session::has('Success'))
     toastr.info("{!! \Illuminate\Support\Facades\Session::get('Success') !!}","Başarılı!")
     @elseif(\Illuminate\Support\Facades\Session::has('Info'))

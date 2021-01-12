@@ -17,7 +17,7 @@ class blogController extends Controller
     }
 
     public function index(){
-        $blog=BlogModel::all();
+        $blog=BlogModel::orderby("rank","asc")->get();
         return view('Backend.Blog.index',compact('blog'));
     }
     public function store(Request $request){

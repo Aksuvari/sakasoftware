@@ -29,6 +29,13 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="example-text-input" class="col-md-2 col-form-label">Başlık</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" name="title" value="{{$services->title}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">İçerik</label>
                             <div class="col-md-10">
                                 <textarea class="form-control" id="description" placeholder="" name="description" rows="10"> {!! $services-> description!!}</textarea>

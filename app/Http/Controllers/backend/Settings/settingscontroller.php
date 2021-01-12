@@ -50,7 +50,7 @@ class settingscontroller extends Controller
             dizinolustur("uploads/$this->viewFolder", 0777, true, true);
             if ($logo == 1) {
                 if ($setting->logo != null) {
-                    unlink("uploads/setting/$setting->logo");
+                    unlink("uploads/webSetting/$setting->logo");
                 }
                 $logo = request()->file('logo');
                 $filename = "logo" .time(). '.' . $logo->extension();
@@ -59,7 +59,7 @@ class settingscontroller extends Controller
             }
             if ($logo2 == 1) {
                 if ($setting->logo2 != null) {
-                    unlink("uploads/setting/$setting->logo2");
+                    unlink("uploads/webSetting/$setting->logo2");
                 }
                 $logo2 = request()->file('logo2');
                 $filename2 = "logo2" .time(). '.' . $logo2->extension();
@@ -68,7 +68,7 @@ class settingscontroller extends Controller
             }
             if ($icon == 1) {
                 if ($setting->icon != null) {
-                    unlink("uploads/setting/$setting->icon");
+                    unlink("uploads/webSetting/$setting->icon");
                 }
                 $icon = request()->file('icon');
                 $filename3 = "icon" .time(). '.' . $icon->extension();

@@ -4,7 +4,7 @@
 use Illuminate\Support\Facades\Route;
 //Admin controller Listesi
 use App\Http\Controllers\backend\Settings\settingscontroller;
-use App\Http\Controllers\backend\Bussiness\businesscontroller;
+use App\Http\Controllers\backend\Business\businesscontroller;
 use App\Http\Controllers\backend\Slider\sliderController;
 use App\Http\Controllers\backend\Blog\blogController;
 use App\Http\Controllers\backend\Content\contentController;
@@ -25,13 +25,16 @@ use App\Http\Controllers\frontend\homeController;
 |
 */
 
+Route::post('/deneme',[homeController::class,'contactForm'])->name('deneme');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/',[homeController::class,'homepageshow'])->name('homepage');
-Route::get('/kurumsal',[homeController::class,'kurumsal'])->name('kurumsal');
+Route::get('/kurumsal/{slug}',[homeController::class,'kurumsal'])->name('kurumsal');
 Route::get('/hizmetlerimiz',[homeController::class,'hizmet'])->name('hizmet');
+Route::get('/hizmetlerimizdetay/{slug}',[homeController::class,'hizmetdetay'])->name('hizmetdetay');
 Route::get('/referanslarimiz',[homeController::class,'referans'])->name('referans');
 Route::get('/blog',[homeController::class,'blog'])->name('blog');
 Route::get('/blogdetay/{slug}',[homeController::class,'blogdetay'])->name('blogdetay');
@@ -44,6 +47,11 @@ Route::prefix('manager')->group(function (){
 Route::name('webSetting.')->group(function (){
     Route::get('setting',[settingscontroller::class,'index'])->name('index');
     Route::put('setting/update/{id}',[settingscontroller::class,'update'])->name('update');
+});
+Route::name('Emails.')->group(function (){
+    Route::get('email',[\App\Http\Controllers\backend\Email\emailController::class,'index'])->name('index');
+    Route::get('email/create',[\App\Http\Controllers\backend\Email\emailController::class,'create'])->name('create');
+
 });
 
 Route::resource('business','backend\Business\businesscontroller');

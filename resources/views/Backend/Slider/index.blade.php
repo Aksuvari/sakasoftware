@@ -104,8 +104,9 @@
                 </div>
             </div>
         </div>
-        <!-- end col -->
-    </div>
+
+
+
 @endsection
 
 @section('script')

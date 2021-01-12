@@ -42,7 +42,7 @@ class projectController extends Controller
         $projects->updated_at=now();
         $projects->created_at=now();
         $projects->save();
-        return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');;
+        return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
     public function edit($id){
         $projects=ProjectModel::findOrFail($id);

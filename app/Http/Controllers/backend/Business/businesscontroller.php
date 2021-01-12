@@ -44,6 +44,8 @@ class businesscontroller extends Controller
             'costumer_contact'=>'required',
             'aut_name'=>'required',
             'aut_maker_name'=>'required',
+            'start_date'=>'required',
+            'due_date'=>'required',
             'contentt'=>'required',
         ];
         $customMessages=[
@@ -52,6 +54,8 @@ class businesscontroller extends Controller
             'costumer_contact.required'=>'Bu Alanı doldurmak zorunludur.',
             'aut_name.required'=>'Bu Alanı doldurmak zorunludur.',
             'aut_maker_name.required'=>'Bu Alanı doldurmak zorunludur.',
+            'start_date.required'=>'Bu Alanı doldurmak zorunludur.',
+            'due_date.required'=>'Bu Alanı doldurmak zorunludur.',
             'contentt.required'=>'Bu Alanı doldurmak zorunludur.',
         ];
         $this->validate($request,$rules,$customMessages);
@@ -62,6 +66,8 @@ class businesscontroller extends Controller
         $business->costumer_contact=$request->costumer_contact;
         $business->aut_name=$request->aut_name;
         $business->aut_maker_name=$request->aut_maker_name;
+        $business->start_date=$request->start_date;
+        $business->due_date=$request->due_date;
         $business->contentt=$request->contentt;
         $business->updated_at=now();
         $business->created_at=now();

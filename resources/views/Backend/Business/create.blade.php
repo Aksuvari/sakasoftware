@@ -62,6 +62,25 @@
                             @enderror
                         </div>
                     </div>
+                        <div class="form-group row">
+                            <label for="example-date-input" class="col-md-2 col-form-label">İş Başlangıç</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="date" name="start_date" id="start_date">
+                                @error('start_date')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-date-input" class="col-md-2 col-form-label">İş Bitiş </label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="date" name="due_date" id="due_date">
+                                @error('due_date')
+                                <div class="alert alert-danger"> {{$message}}</div>
+                                @enderror
+                            </div>
+                        </div>
+
 
                     <div class="form-group text-center">
                         <label for="example-tel-input" class="col-md-2 col-form-label">Not</label>
