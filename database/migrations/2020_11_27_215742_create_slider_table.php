@@ -16,6 +16,7 @@ class CreateSliderTable extends Migration
         Schema::create('slider', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('image');
             $table->longText('description');
             $table->tinyInteger('rank')->default(0);
             $table->tinyInteger('isActive')->default(1);

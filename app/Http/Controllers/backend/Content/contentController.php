@@ -11,6 +11,12 @@ use Illuminate\Support\Str;
 
 class contentController extends Controller
 {
+    public $viewFolder = "";
+
+    public function __construct()
+    {
+        $this->viewFolder = "content";
+    }
     public function index(){
         $contents=ContentModel::orderby("rank","asc")->get();
         return view('Backend.Content.index',compact('contents'));
@@ -35,15 +41,24 @@ class contentController extends Controller
         $this->validate($request,$rules,$customMessages);
 
         $contents=new ContentModel();
-        $contents->category_id=$request->category;
-        $contents->title=$request->title;
-        $contents->short_des=$request->short_des;
-        $contents->description=$request->description;
-        $contents->slug = Str::slug(request('title'),'-');
-        $contents->updated_at=now();
-        $contents->created_at=now();
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $contents->image=$filename;
+            $contents->category_id=$request->category;
+            $contents->title=$request->title;
+            $contents->short_des=$request->short_des;
+            $contents->description=$request->description;
+            $contents->slug = Str::slug(request('title'),'-');
+            $contents->updated_at=now();
+            $contents->created_at=now();
+
+        }
         $contents->save();
-        return redirect()->route('Contents.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');;
+        return redirect()->route('Contents.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
     public function edit($id){
         $contents=ContentModel::findOrFail($id);
@@ -64,15 +79,24 @@ class contentController extends Controller
             'description.required'=>'Bu Alanı doldurmak zorunludur.',
         ];
         $this->validate($request,$rules,$customMessages);
-
         $contents=ContentModel::find($id);
-        $contents->title=$request->title;
-        $contents->category_id=$request->category;
-        $contents->short_des=$request->short_des;
-        $contents->description=$request->description;
-        $contents->slug = Str::slug(request('title'),'-');
-        $contents->updated_at=now();
-        $contents->created_at=now();
+
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $contents->image=$filename;
+            $contents->category_id=$request->category;
+            $contents->title=$request->title;
+            $contents->short_des=$request->short_des;
+            $contents->description=$request->description;
+            $contents->slug = Str::slug(request('title'),'-');
+            $contents->updated_at=now();
+            $contents->created_at=now();
+
+        }
         $contents->save();
         return redirect()->route('Contents.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
     }

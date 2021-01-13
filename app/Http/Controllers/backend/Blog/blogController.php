@@ -11,6 +11,12 @@ use Illuminate\Support\Str;
 class blogController extends Controller
 {
 
+    public $viewFolder = "";
+
+    public function __construct()
+    {
+        $this->viewFolder = "blog";
+    }
     public function create(){
 
         return view('Backend.Blog.create');
@@ -35,14 +41,23 @@ class blogController extends Controller
         $this->validate($request,$rules,$customMessages);
 
         $blog=new BlogModel;
-        $blog->title=$request->title;
-        $blog->description=$request->description;
-        $blog->label=$request->label;
-        $blog->slug = Str::slug(request('title'),'-');
-        $blog->updated_at=now();
-        $blog->created_at=now();
-        $blog->save();
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $blog->image=$filename;
+            $blog->title=$request->title;
+            $blog->description=$request->description;
+            $blog->label=$request->label;
+            $blog->slug = Str::slug(request('title'),'-');
+            $blog->updated_at=now();
+            $blog->created_at=now();
 
+        }
+
+        $blog->save();
         return redirect()->route('Blogs.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
 
@@ -65,12 +80,23 @@ class blogController extends Controller
         ];
         $this->validate($request,$rules,$customMessages);
         $blog=BlogModel::find($id);
-        $blog->title=$request->title;
-        $blog->description=$request->description;
-        $blog->label=$request->label;
-        $blog->slug = Str::slug(request('title'),'-');
-        $blog->updated_at=now();
-        $blog->created_at=now();
+
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $blog->image=$filename;
+            $blog->title=$request->title;
+            $blog->description=$request->description;
+            $blog->label=$request->label;
+            $blog->slug = Str::slug(request('title'),'-');
+            $blog->updated_at=now();
+            $blog->created_at=now();
+
+        }
+
         $blog->save();
         return redirect()->route('Blogs.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');
     }

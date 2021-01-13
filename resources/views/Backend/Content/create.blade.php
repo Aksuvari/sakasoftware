@@ -58,6 +58,13 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="example-url-input" class="col-md-2 col-form-label">Resim</label>
+                                <div class="col-md-10">
+                                    <input  type="file"   class="form-control" name="image" value="">
+                                </div>
+                            </div>
+
                     <div class="form-group row text-right">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-primary"> Ekle</button>

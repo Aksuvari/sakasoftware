@@ -11,6 +11,13 @@ use Illuminate\Support\Str;
 
 class projectController extends Controller
 {
+    public $viewFolder = "";
+
+    public function __construct()
+    {
+        $this->viewFolder = "portfolio";
+    }
+
     public function index(){
         $projects=ProjectModel::orderBy("rank","asc")->get();
         return view('Backend.Portfolio.index',compact('projects'));
@@ -34,13 +41,24 @@ class projectController extends Controller
         ];
         $this->validate($request,$rules,$customMessages);
         $projects= new ProjectModel;
-        $projects->title=$request->title;
-        $projects->project_type_id=$request->type;
-        $projects->project_url=$request->project_url;
-        $projects->description=$request->description;
-        $projects->slug=Str::slug(request('title'),'-');
-        $projects->updated_at=now();
-        $projects->created_at=now();
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $projects->image=$filename;
+            $projects->title=$request->title;
+            $projects->project_type_id=$request->type;
+            $projects->project_url=$request->project_url;
+            $projects->description=$request->description;
+            $projects->slug=Str::slug(request('title'),'-');
+            $projects->updated_at=now();
+            $projects->created_at=now();
+
+        }
+
+
         $projects->save();
         return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Gerçekleşti');
     }
@@ -64,13 +82,22 @@ class projectController extends Controller
         ];
         $this->validate($request,$rules,$customMessages);
         $projects= ProjectModel::findOrFail($id);
-        $projects->title=$request->title;
-        $projects->project_type_id=$request->type;
-        $projects->project_url=$request->project_url;
-        $projects->description=$request->description;
-        $projects->slug=Str::slug(request('title'),'-');
-        $projects->updated_at=now();
-        $projects->created_at=now();
+        $image=request()->hasFile('image');
+        if($image==true){
+            $image=request()->file('image');
+            $filename ="image".time() . '.' . $image->extension();
+            dizinolustur("uploads/$this->viewFolder", 0777, true, true);
+            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            $projects->image=$filename;
+            $projects->title=$request->title;
+            $projects->project_type_id=$request->type;
+            $projects->project_url=$request->project_url;
+            $projects->description=$request->description;
+            $projects->slug=Str::slug(request('title'),'-');
+            $projects->updated_at=now();
+            $projects->created_at=now();
+
+        }
         $projects->save();
         return redirect()->route('Ports.index')->with('Success','Kayıt İşlemi Başarıyla Güncellendi');;
 

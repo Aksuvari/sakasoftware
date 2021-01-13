@@ -18,6 +18,7 @@ class CreateProjectTable extends Migration
             $table->unsignedBigInteger('project_type_id');
             $table->string('title');
             $table->string('project_url');
+            $table->string('image');
             $table->longText('description');
             $table->string('slug');
             $table->tinyInteger('isActive')->default(1);

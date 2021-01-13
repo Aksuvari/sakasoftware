@@ -36,11 +36,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="example-url-input" class="col-md-2 col-form-label">Resim</label>
+                            <div class="col-md-10">
+                                <input  type="file"   class="form-control" name="image" value="">
+                            </div>
+                        </div>
 
                     <div class="form-group row">
-                        <label for="example-text-input" class="col-md-2 col-form-label">Etiketler</label>
-                        <div class="col-md-10" >
-                            <input class="form-control" type="text" name="label"  data-role="tagsinput" >
+                        <label for="example-text-input" class="col-md-2 col-form-label ">Etiketler</label>
+                        <div class="col-md-10">
+                            <div class="bootstrap-tagsinput">
+                            <input class="sr-only" type="text" name="label"   data-role="tagsinput" >
+                            </div>
                             @error('label')
                             <div class="alert alert-danger"> {{$message}}</div>
                             @enderror

@@ -14,7 +14,7 @@
                 <ul class="nav-modules">
                     <!-- Social nav-->
                     <li class="d-flex align-items-center"><span class="i fas fa-phone-alt"></span>
-                        <a class="nav-link text-black text-light-red pr-0" href="page-contact.html">+19 855 518 386</a></li>
+                        <a class="nav-link text-black text-light-red pr-0" href="tel:{{\App\Models\SettingModel::first()->phone_1}}">{{\App\Models\SettingModel::first()->phone_1}}</a></li>
                 </ul>
             </div>
         </div>

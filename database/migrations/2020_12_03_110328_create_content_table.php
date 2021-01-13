@@ -18,6 +18,7 @@ class CreateContentTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->String('title');
             $table->String('short_des');
+            $table->String('image');
             $table->longText('description');
             $table->string('slug');
             $table->tinyInteger('isActive')->default(1);

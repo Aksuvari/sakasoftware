@@ -18,6 +18,7 @@ class CreateBlogTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('label');
+            $table->string('image');
             $table->string('slug');
             $table->tinyInteger('anasayfa')->default('0');
             $table->tinyInteger('slider')->default('0');
