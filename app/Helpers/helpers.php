@@ -43,11 +43,11 @@ function convertToSEO($text)
     return strtolower(str_replace($turkce, $convert, $text));
 
 }
+
 function sendMail($template, $toMail = "", $subject = "", $message = [])
 {
     $item = \App\Models\EmailModel::where('isActive', 1)->first();
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
-    $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
     $mail->isSMTP();
     $mail->Host = $item->host;
     $mail->SMTPAuth = true;
@@ -64,6 +64,42 @@ function sendMail($template, $toMail = "", $subject = "", $message = [])
     $mail->Subject = $subject;
     $mail->Body = view($template, compact('message'));
     return $mail->send();
+}
+
+
+function getslider($path = "", $picture = "", $resolution = "50x50")
+{
+
+    if ($picture != "") {
+
+        if (file_exists(public_path("frontend/$path/$resolution/$picture"))) {
+            $picture = url("frontend/{$path}/{$resolution}/{$picture}");
+        } else {
+            $picture = url("assets/images/default.png");
+        }
+
+
+    } else {
+
+        echo "assets/images/default.png";
+
+    }
+    return $picture;
+
+}
+
+function get_picture($path = "", $picture = "")
+{
+    if ($picture != "") {
+        if (file_exists(public_path("uploads/$path/$picture"))) {
+            $picture = url("uploads/{$path}/{$picture}");
+        } else {
+            $picture = url("assets/images/default.png");
+        }
+    } else {
+        echo "assets/images/default.png";
+    }
+    return $picture;
 }
 
 

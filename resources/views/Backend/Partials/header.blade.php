@@ -31,9 +31,9 @@
 
 
                 <div class="dropdown d-inline-block">
-                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="rounded-circle header-profile-user" src="{{asset('backend')}}/assets/images/users/avatar-2.jpg" alt="Header Avatar">
-                        <span class="d-none d-xl-inline-block ml-1">Patrick</span>
+                        <span class="d-none d-xl-inline-block ml-1">{{ Auth::user()->name }}</span>
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -41,9 +41,13 @@
                         <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i> Profile</a>
                         <a class="dropdown-item" href="{{route('webSetting.index')}}"><i class="bx bx-wallet font-size-16 align-middle mr-1"></i> Site Ayarları </a>
                         <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="bx bx-wrench font-size-16 align-middle mr-1"></i> E-mail Ayarları</a>
-                        <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Kullanıcı Yönetimi</a>
+                        <a class="dropdown-item" href="{{ route('profile.show') }}"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i>{{ __('Profile') }}</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Çıkış</a>
+
+                        <form method="post" action="{{route('logout')}}">
+                            @csrf
+                            <button class="dropdown-item text-danger" type="submit"><i class="mdi mdi-power text-danger"></i> Çıkış</button>
+                        </form>
                     </div>
                 </div>
 
@@ -102,8 +106,8 @@
 
             <div class="mt-3">
 
-                <a href="#" class="text-dark font-weight-medium font-size-16">Patrick Becker</a>
-                <p class="text-body mt-1 mb-0 font-size-13">UI/UX Designer</p>
+                <a href="#" class="text-dark font-weight-medium font-size-16">{{ Auth::user()->name }}</a>
+
 
             </div>
         </div>
@@ -115,7 +119,7 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('dash')}}" class="waves-effect">
                         <i class="mdi mdi-airplay"></i>
                         <span>Dashboard</span>
                     </a>
@@ -137,7 +141,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="{{route('Emails.index')}}" class="waves-effect">
                         <i class="mdi mdi-inbox-full"></i>
                         <span>Email Yönetimi</span>
                     </a>
@@ -155,7 +159,7 @@
                 <li>
                     <a href="{{route('Blogs.index')}}" class="waves-effect">
                         <i class="mdi mdi-account-circle-outline"></i>
-                        <span>Blok Yönetimi</span>
+                        <span>Blog Yönetimi</span>
                     </a>
 
                 </li>

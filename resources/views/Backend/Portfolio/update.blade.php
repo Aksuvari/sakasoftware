@@ -58,6 +58,13 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="example-url-input" class="col-md-2 col-form-label">Resim</label>
+                            <div class="col-md-10">
+                                <img src="{{get_picture('portfolio',$projects->image)}}">
+                                <input  type="file"   class="form-control" name="image" value="{{get_picture('portfolio',$projects->image)}}">
+                            </div>
+                        </div>
 
                         <div class="form-group row text-right">
                             <div class="col-sm-12">
@@ -75,10 +82,6 @@
 
 @section('script')
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#description' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+        tinymce.init({selector:'textarea'});
     </script>
 @endsection

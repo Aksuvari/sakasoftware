@@ -23,7 +23,7 @@ class CreateMailSettingTable extends Migration
             $table->string("password");
             $table->string("title");
             $table->string("protocol");
-            $table->tinyInteger("isActive");
+            $table->tinyInteger("isActive")->default(1);
             $table->timestamps();
         });
     }

@@ -99,7 +99,7 @@
                             @if($sayac==0)
                                 <tr>
 
-                                    <td colspan="8" class="text-center">
+                                    <td colspan="10" class="text-center">
                                         <div class="alert alert-danger" role="alert"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
                                                     KAYITLAR BULUNAMADI!! Lütfen Yeni Kayıt Yapınız.
                                                 </font></font></div>

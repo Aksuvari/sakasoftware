@@ -71,12 +71,8 @@
 
 @section('script')
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#description' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+        tinymce.init({selector:'textarea'});
     </script>
-    <script src="{{asset('backend/assets/extra/Label/bootstrap-tagsinput.min.js')}}"></script>
+
 
 @endsection

@@ -35,7 +35,7 @@
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item active">Welcome to Qovex Dashboard</li>
+
                                 </ol>
                             </div>
 

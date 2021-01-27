@@ -14,7 +14,8 @@
                 <div class="card-body">
                     <h4 class="card-title">E-Posta Yönetimi</h4>
                     <p class="card-title-desc">Sitemizde bulunan E-Posta Yönetimine ait içerikler</p>
-                    <form action="" method="post">
+                    <form action="{{route('Emails.store')}}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group row">
@@ -91,11 +92,7 @@
 
 @section('script')
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#description' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+        tinymce.init({selector:'textarea'});
     </script>
 @endsection
 

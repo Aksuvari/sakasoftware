@@ -46,7 +46,7 @@ class projectController extends Controller
             $image=request()->file('image');
             $filename ="image".time() . '.' . $image->extension();
             dizinolustur("uploads/$this->viewFolder", 0777, true, true);
-            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            upload_picture($image, "uploads/$this->viewFolder", 397, 310, $filename);
             $projects->image=$filename;
             $projects->title=$request->title;
             $projects->project_type_id=$request->type;
@@ -87,7 +87,7 @@ class projectController extends Controller
             $image=request()->file('image');
             $filename ="image".time() . '.' . $image->extension();
             dizinolustur("uploads/$this->viewFolder", 0777, true, true);
-            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            upload_picture($image, "uploads/$this->viewFolder", 397, 310, $filename);
             $projects->image=$filename;
             $projects->title=$request->title;
             $projects->project_type_id=$request->type;

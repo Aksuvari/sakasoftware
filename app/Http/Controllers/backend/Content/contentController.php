@@ -46,7 +46,7 @@ class contentController extends Controller
             $image=request()->file('image');
             $filename ="image".time() . '.' . $image->extension();
             dizinolustur("uploads/$this->viewFolder", 0777, true, true);
-            upload_picture($image, "uploads/$this->viewFolder", 180, 180, $filename);
+            upload_picture($image, "uploads/$this->viewFolder", 683, 1024, $filename);
             $contents->image=$filename;
             $contents->category_id=$request->category;
             $contents->title=$request->title;
